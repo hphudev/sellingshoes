@@ -1,2 +1,2 @@
-# sellingshoes..github.io
+# sellingshoes.github.io
 Website Selling Shoes
