@@ -1,7 +1,7 @@
-# Hệ thống quản lý quán cà phê
+# Hệ thống bá giày
 
 ## [ 👉 Truy cập hệ thống](https://hphudev.github.io/coffeeshopmanagement/)
-## [ 👉 Bảng phân công nhiệm vụ](https://docs.google.com/spreadsheets/d/1psbGGun83JsakSIM-gpP8nIIP9mZv5U0/edit?)
+## [ 👉 Bảng phân công nhiệm vụ]
 ## Giới thiệu
 Hệ thống bán giày mà chúng toi đang phát triển sẽ giúp bạn *rất* nhiều trong việc quản bá thương hiệu của chính mình. Với giao diện được đội ngũ chúng tôi thiết kế chu đáo, chi tiết và đặc biệt dựa theo các tiêu chuẩn quốc tế. Ngoài giao diện, các tính năng mà chúng tôi tích hợp cho bạn sẽ luôn là công cụ tích cực hỗ trợ bạn trong suốt quá trình kinh doanh cũng như quảng bá thương hiệu.
 
