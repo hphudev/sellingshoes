@@ -52,3 +52,11 @@ html {
         opacity: 1;
     }
 }
+
+@keyframes slideLeftToRight {
+    from {
+        transform: translateX(40vw);
+    } to {
+        transform: translateX(0);
+    }
+}
