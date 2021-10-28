@@ -53,13 +53,21 @@ h1, p {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.heading {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
 .content-text {
     font-size: 16px;
     line-height: 1.6;
 }
 
-.three-items-on-row {
-    margin: 40px 0;
+.three-items-on-row,
+.two-items-on-row {
+    margin: 30px 0;
     justify-content: space-between;
     align-items: center;
 }
@@ -74,7 +82,18 @@ h1, p {
     padding: 0 12px 0 0;
 }
 
-@media (max-width: 749px) {
+.two-items-on-row img {
+    width: 49%;
+    height: auto;
+}
+
+.two-items-on-row p {
+    width: 49%;
+    padding: 0 12px 0 0;
+}
+
+/* mobile & tablet */
+@media (max-width: 1199px) {
     .sm-w-90 {
         width: 90%;
         margin: 0 auto;
@@ -84,64 +103,43 @@ h1, p {
         font-size: 40px;
     }
 
-    .title-long {
-        font-size: 32px;
-    }
-
     .title-sub {
         font-size: 24px;
+    }
+
+    .news-content-container {
+        padding: 20px 24px;
+    }
+}
+
+/* mobile */
+@media (max-width: 739px) {
+    .title-long {
+        font-size: 32px;
     }
 
     .news-title-container {
         text-align: left;
     }
 
-    .news-content-container {
-        padding: 20px 24px;
-    }
-
-    .three-items-on-row {
+    .three-items-on-row,
+    .two-items-on-row {
         flex-direction: column;
     }
 
-    .three-items-on-row img {
+    .three-items-on-row img,
+    .two-items-on-row img {
         width: 100%;
         height: auto;
     }
 
-    .three-items-on-row p {
+    .three-items-on-row p,
+    .two-items-on-row p {
         width: 100%;
     }
 }
 
-@media (min-width: 749px) and (max-width: 1199px) {
-    .sm-w-90 {
-        width: 90%;
-        margin: 0 auto;
-    }
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
 
-    .title-main {
-        font-size: 40px;
-    }
-
-    .title-sub {
-        font-size: 24px;
-    }
-
-    .news-content-container {
-        padding: 20px 24px;
-    }
-
-    /* .three-items-on-row {
-        flex-direction: column;
-    }
-
-    .three-items-on-row img {
-        width: 100%;
-        height: auto;
-    }
-
-    .three-items-on-row p {
-        width: 100%;
-    } */
 }
