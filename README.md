@@ -1,4 +1,4 @@
-# Hệ thống bá giày
+# Hệ thống bán giày
 
 ## [ 👉 Truy cập hệ thống](https://hphudev.github.io/sellingshoes/)
 ## [ 👉 Bảng phân công nhiệm vụ](https://trello.com/b/vCWGv1aQ/d%E1%BB%B1-%C3%A1n-website-b%C3%A1n-gi%C3%A0y-giao-ti%E1%BA%BFp-ng%C6%B0%E1%BB%9Di-m%C3%A1y)
