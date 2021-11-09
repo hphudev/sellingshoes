@@ -45,6 +45,18 @@
     .navbar__list {
         display: none;
     }
+
+    .search {
+        display: none;
+    }
+
+    .body__background {
+        display: none;
+    }
+
+    .navbar__cart-wrapper {
+        width: 110px;
+    }
     
     .slogan__item {
         width: 100%;
