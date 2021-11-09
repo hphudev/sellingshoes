@@ -42,6 +42,10 @@
 
 /* Mobile */
 @media (max-width: 46.188rem) {
+    .navbar__list {
+        display: none;
+    }
+    
     .slogan__item {
         width: 100%;
     }
@@ -59,5 +63,28 @@
 
     .bottom-background {
         display: none;
+    }
+
+    .news {
+        flex-direction: column;
+    }
+
+    .news__item {
+        max-width: 100%;
+        margin: 0 auto 24px;
+    }
+
+    .slider__text{
+        font-size: 1.1rem;
+    }
+
+    .topbar__item-link {
+        font-size: 1.1em;
+        padding: 8px;
+    }
+
+    .topbar__list {
+        padding-left: 0;
+        margin: 10px auto;
     }
 }

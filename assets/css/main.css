@@ -599,7 +599,9 @@
     background-color: #F5F5F5;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
     width: 320px;
-    height: 400px;
+    /* height: 400px; */
+    height: auto;
+    max-width: 30%;
     margin-bottom: 32px;
 }
 
@@ -626,6 +628,7 @@
     display: block;
     text-align: center;
     padding: 5px;
+    margin-bottom: 16px;
 }
 
 .news__detail-link:hover {
