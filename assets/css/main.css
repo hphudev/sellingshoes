@@ -748,10 +748,6 @@
 }
 
 /* News */
-h1, p {
-    margin: 0;
-}
-
 .mt-mb-12 {
     margin: 12px 0;
 }
@@ -841,5 +837,4 @@ h1, p {
     width: 49%;
     padding: 0 12px 0 0;
 }
-
 /* End News */
