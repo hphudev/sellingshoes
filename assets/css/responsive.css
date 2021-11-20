@@ -4,6 +4,10 @@
         width: 250px;
     }
 
+    #mobile-nav {
+        display: none;
+    }
+
     .feedback__item {
         width: 260px;
         min-width: 30%;
@@ -12,6 +16,10 @@
 
 /* Tablet */
 @media (min-width: 46.25rem ) and (max-width: 63.938rem) {
+    #mobile-nav {
+        display: none;
+    }
+
     .navbar__dropdown-column {
         padding-left: 40px;
     }
@@ -42,20 +50,12 @@
 
 /* Mobile */
 @media (max-width: 46.188rem) {
-    .navbar__list {
-        display: none;
-    }
-
-    .search {
+    .navbar {
         display: none;
     }
 
     .body__background {
         display: none;
-    }
-
-    .navbar__cart-wrapper {
-        width: 110px;
     }
     
     .slogan__item {
