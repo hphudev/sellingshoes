@@ -56,6 +56,12 @@
     .news-content-container {
         padding: 20px 24px;
     }
+
+    .section {
+        width: 50%;
+        padding: 0 8px 0 0;
+        margin: 12px 0;
+    }
     /* End News */
 }
 
@@ -161,4 +167,22 @@
         padding: 20px 24px;
     }
     /* End News */
+
+    /* Get Help */
+    .section-container {
+        padding: 24px 28px;
+        border: none;
+    }
+
+    .section-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section {
+        width: 100%;
+        padding: 0 8px 0 0;
+        margin: 12px 0;
+    }
+    /* End Get Help */
 }
