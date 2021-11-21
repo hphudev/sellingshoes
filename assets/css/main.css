@@ -1,5 +1,5 @@
 #header {
-    min-height: 100px;
+    min-height: 50px;
     background-color: var(--white-color);
 }
 
@@ -230,6 +230,7 @@
     font-size:2.1rem;
     padding:.65rem 1rem;
     position:absolute;
+    top: 12px;
 }
     
 .mobile-nav__menu-button {
@@ -237,6 +238,7 @@
     cursor:pointer;
     font-size:2rem;
     padding:.75rem 1.55rem;
+    margin-top: 10px;
     position:fixed;
     right:0;
 }
@@ -267,9 +269,8 @@
 /* Menu Styles */
 
 #mobile-nav {
-    /* background-color:#60babb; */
     background-color: var(--main-color);
-    position:fixed;
+    position: fixed;
     width:100%;
     z-index:1;
 }
@@ -310,6 +311,28 @@
     border-top:none;
     padding-left:1rem;
 }
+
+.mobile-nav__search {
+    margin-left: 18%;
+}
+
+.mobile-nav__search-input {
+    width: 75%;
+    height: 26px;
+    border-radius: 4px;
+    outline: transparent;
+    border: none;
+    padding-left: 8px;
+    margin: 5px 0;
+}
+
+.mobile-nav__search-link{
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 1.2rem !important;
+    padding: 8px !important;
+}
+
 
 /* Search */
 
