@@ -333,6 +333,22 @@
     padding: 8px !important;
 }
 
+.mobile-nav__link-wrapper{
+    position: absolute;
+    top: 17.5px;
+    right: 50px;
+}
+
+.mobile-nav__link {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+
+.mobile-nav__icon {
+    font-size: 1.8rem;
+}
+
 
 /* Search */
 
