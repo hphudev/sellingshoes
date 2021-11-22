@@ -584,18 +584,72 @@
     </div>
 
     <!-- Modals -->
-    <div class="modal">
+
+    <!-- Login -->
+    <div class="modal-login">
         <div class="modal__login-container">
             <div class="modal__header">
                 <p class="modal__header-title">ĐĂNG NHẬP</p>
             </div>
             <div class="modal__body">
-                <input class="modal__input" type="text" placeholder="Email / Số điện thoại / Tên đăng nhập">
+                <input class="modal__input" type="text" placeholder="Email / Số điện thoại / Tên đăng nhập" style="margin-top: 0;">
                 <input class="modal__input" type="password" placeholder="Mật khẩu">
                 <button class=modal__button>
                     ĐĂNG NHẬP
                 </button>
                 <a href="#" class="modal__link">Quên mật khẩu</a>
+            </div>
+            <div class="login-with">
+                <div class="login-with__title">ĐĂNG NHẬP VỚI</div>
+                <div class="login-with__item">
+                    <i  class="fab fa-facebook-f login-with__icon"></i>
+                    Facebook
+                </div>
+                <div style="right: 0;" class="login-with__item">
+                    <i class="fab fa-google login-with__icon"></i>
+                    Google
+                </div>
+            </div>
+            <div class="modal__suggestion">
+                Bạn chưa có tài khoản ? <a href="#" class="modal__link-suggestion">Đăng ký ngay</a>
+            </div>
+        </div>
+    </div>
+    <!-- Register -->
+    <div class="modal-register">
+        <div class="modal__register-container">
+            <div class="modal__header">
+                <p class="modal__header-title">ĐĂNG KÝ</p>
+                <div class="modal__body">
+                    <input class="modal__input" type="text" placeholder="Email / Số điện thoại / Tên đăng nhập" style="margin-top: 0;">
+                    <input class="modal__input" type="password" placeholder="Mật khẩu">
+                    <input class="modal__input" type="password" placeholder="Nhập lại mật khẩu">
+                    <div class="modal__name-fields">
+                        <input class="modal__name-input" type="text" placeholder="Họ">
+                        <input class="modal__name-input" type="text" placeholder="Tên">
+                    </div>
+                    <div class="modal__gender-section">
+                        <div>
+                            <input type="radio" id="modal__gender-male" name="modal__gender">
+                            <label for="modal__gender-male">Nam</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="modal__gender-female" name="modal__gender">
+                            <label for="modal__gender-female">Nữ</label>
+                        </div>
+                    </div>
+                    <div class="modal__term">
+                        <input type="checkbox">
+                        Tôi đã đọc và đồng ý với các điều khoản
+                    </div>
+                    <button class=modal__button>
+                        ĐĂNG KÝ
+                    </button>
+                    <div class="modal__suggestion">
+                        Bạn đã có tài khoản ? <a href="#" class="modal__link-suggestion">Đăng nhập ngay</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

@@ -878,9 +878,21 @@
 
 /* Modals */
 
-/* Login */
-.modal {
+.modal-login {
     display: flex;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .4);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-register {
+    display: none;
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -901,13 +913,22 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
+.modal__register-container {
+    width: 500px;
+    height: 630px;
+    max-width: calc(100% - 32px);
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
 .modal__header {
-    height: 50px;
+    height: 70px;
     margin-bottom: 16px;
 }
 
 .modal__header-title {
-    line-height: 50px;
+    line-height: 70px;
     font-size: 2.8rem;
     font-weight: 500;
     color: var(--text-color);
@@ -928,6 +949,39 @@
     border: 1px solid #9B9B9B;
     border-radius: 6px;
     color: var(--text-color);
+}
+
+.modal__name-fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__name-input {
+    width: 145px;
+    height: 40px;
+    font-size: 1.4rem;
+    padding: 8px;
+    margin-top: 20px;
+    border: 1px solid #9B9B9B;
+    border-radius: 6px;
+    color: var(--text-color);
+}
+
+.modal__gender-section {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 1.4rem;
+    margin-top: 32px;
+}
+
+.modal__gender-section input {
+    width: 1.2em;
+    height: 1.2em;
+    cursor: pointer;
+    margin-left: -12px;
+    margin-right: -4px;
+    vertical-align: bottom;
 }
 
 .modal__button {
@@ -956,6 +1010,79 @@
     display: block;
 }
 
+.modal__link:hover {
+    opacity: .8;
+}
 
+.modal__term {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 32px 0 16px;
+}
+
+.modal__term input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 4px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.login-with {
+    height: 90px;
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 32px;
+    border-top: 1px solid rgba(0, 0, 0, .3);
+    position: relative;
+}
+
+.login-with__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 16px;
+}
+
+.login-with__item {
+    position: absolute;
+    width: 145px;
+    height: 35px;
+    background-color: #61AAFF;
+    display: inline-block;
+    margin-top: 12px;
+    line-height: 35px;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.login-with__icon {
+    margin-left: 32px;
+    margin-right: 6px;
+    font-size: 1.7rem;
+}
+
+.login-with__item:hover {
+    cursor: pointer;
+    opacity: .9;
+}
+
+.modal__suggestion {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.modal__link-suggestion {
+    text-decoration: none;
+    color: #FF2B00;
+    margin-left: 4px;
+}
+
+.modal__link-suggestion:hover {
+    opacity: .8;
+}
 
 
