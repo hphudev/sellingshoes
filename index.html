@@ -586,8 +586,11 @@
     <!-- Modals -->
 
     <!-- Login -->
-    <div class="modal-login">
+    <div class="modal-login open-modal">
         <div class="modal__login-container">
+            <button class="modal__close">
+                <i class="fas fa-times"></i>
+            </button>
             <div class="modal__header">
                 <p class="modal__header-title">ĐĂNG NHẬP</p>
             </div>
@@ -618,6 +621,9 @@
     <!-- Register -->
     <div class="modal-register">
         <div class="modal__register-container">
+            <button class="modal__close">
+                <i class="fas fa-times"></i>
+            </button>
             <div class="modal__header">
                 <p class="modal__header-title">ĐĂNG KÝ</p>
                 <div class="modal__body">
@@ -640,7 +646,7 @@
                     </div>
                     <div class="modal__term">
                         <input type="checkbox">
-                        Tôi đã đọc và đồng ý với các điều khoản
+                        Tôi đã đọc và đồng ý với <a href="#">các điều khoản</a> 
                     </div>
                     <button class=modal__button>
                         ĐĂNG KÝ

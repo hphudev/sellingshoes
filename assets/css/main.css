@@ -878,8 +878,32 @@
 
 /* Modals */
 
-.modal-login {
+.modal-login.open-modal {
     display: flex;
+}
+
+.modal-register.open-modal {
+    display: flex;
+}
+
+.modal__close {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+.modal__close:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.modal-login {
+    display: none;
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -1026,6 +1050,11 @@
     margin-right: 4px;
     vertical-align: top;
     cursor: pointer;
+}
+
+.modal__term a {
+    color: #151EFF;
+    text-decoration: none;
 }
 
 .login-with {
