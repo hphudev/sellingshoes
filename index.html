@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li class="topbar__item">
-                        <a class="topbar__item-link" href="#">
+                        <a class="topbar__item-link" href="#" onclick="showLoginModal()">
                             <i class="topbar__icon fas fa-user"></i>
                             Đăng nhập
                         </a>
@@ -586,9 +586,9 @@
     <!-- Modals -->
 
     <!-- Login -->
-    <div class="modal-login open-modal">
+    <div class="modal-login">
         <div class="modal__login-container">
-            <button class="modal__close">
+            <button class="modal__close" onclick="hideLoginModal()">
                 <i class="fas fa-times"></i>
             </button>
             <div class="modal__header">
@@ -614,14 +614,14 @@
                 </div>
             </div>
             <div class="modal__suggestion">
-                Bạn chưa có tài khoản ? <a href="#" class="modal__link-suggestion">Đăng ký ngay</a>
+                Bạn chưa có tài khoản ? <a href="#" class="modal__link-suggestion" onclick="registerNow()">Đăng ký ngay</a>
             </div>
         </div>
     </div>
     <!-- Register -->
     <div class="modal-register">
         <div class="modal__register-container">
-            <button class="modal__close">
+            <button class="modal__close" onclick="hideRegisterModal()">
                 <i class="fas fa-times"></i>
             </button>
             <div class="modal__header">
@@ -652,7 +652,7 @@
                         ĐĂNG KÝ
                     </button>
                     <div class="modal__suggestion">
-                        Bạn đã có tài khoản ? <a href="#" class="modal__link-suggestion">Đăng nhập ngay</a>
+                        Bạn đã có tài khoản ? <a href="#" class="modal__link-suggestion" onclick="loginNow()">Đăng nhập ngay</a>
                     </div>
                 </div>
 
@@ -752,6 +752,51 @@
             }          
             slides[slideIndex-1].style.display = "block";
         }
+        // Modals
+        const loginModal =  document.querySelector(".modal-login");
+        const registerModal = document.querySelector(".modal-register");
+
+        const loginModalContainer = document.querySelector(".modal__login-container");
+        const registerModalContainer = document.querySelector(".modal__register-container");
+        
+        function showLoginModal() {
+            loginModal.classList.add('open-modal');
+        }
+
+        function hideLoginModal() {
+            loginModal.classList.remove('open-modal');
+        }
+
+        function showRegisterModal() {
+            registerModal.classList.add('open-modal');
+        }
+
+        function hideRegisterModal() {
+            registerModal.classList.remove('open-modal');
+        }
+
+        function registerNow() {
+            hideLoginModal();
+            showRegisterModal();
+        }
+
+        function loginNow() {
+            hideRegisterModal();
+            showLoginModal();
+        }
+
+        // Hide modal whenever click outside
+
+        loginModal.addEventListener('click', hideLoginModal);
+        loginModalContainer.addEventListener('click', function (event) {
+            event.stopPropagation();    
+        });
+
+        registerModal.addEventListener('click', hideRegisterModal);
+        registerModalContainer.addEventListener('click', function (event) {
+            event.stopPropagation();    
+        });
+
     </script>
 
 </body>
