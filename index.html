@@ -597,18 +597,18 @@
             <div class="modal__body">
                 <input class="modal__input" type="text" placeholder="Email / Số điện thoại / Tên đăng nhập" style="margin-top: 0;">
                 <input class="modal__input" type="password" placeholder="Mật khẩu">
-                <button class=modal__button>
+                <button class="modal__button" onclick="hideLoginModal()">
                     ĐĂNG NHẬP
                 </button>
                 <a href="#" class="modal__link">Quên mật khẩu</a>
             </div>
             <div class="login-with">
                 <div class="login-with__title">ĐĂNG NHẬP VỚI</div>
-                <div class="login-with__item">
+                <div class="login-with__item" onclick="hideLoginModal()">
                     <i  class="fab fa-facebook-f login-with__icon"></i>
                     Facebook
                 </div>
-                <div style="right: 0;" class="login-with__item">
+                <div style="right: 0;" class="login-with__item" onclick="hideLoginModal()">
                     <i class="fab fa-google login-with__icon"></i>
                     Google
                 </div>
@@ -648,7 +648,7 @@
                         <input type="checkbox">
                         Tôi đã đọc và đồng ý với <a href="#">các điều khoản</a> 
                     </div>
-                    <button class=modal__button>
+                    <button class="modal__button" onclick="hideRegisterModal()">
                         ĐĂNG KÝ
                     </button>
                     <div class="modal__suggestion">
