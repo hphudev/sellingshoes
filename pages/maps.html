@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/map.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row map">
+        <div class="col-md-4 map">
+          <!-- Input Location -->
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Nhập địa chỉ</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+            />
+            <hr />
+          </div>
+          <div>
+            <h5 class="store-title">ShoeStore Thủ Đức</h5>
+            <p>
+              02 Hàn Thuyên, <br />
+              Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh <br />
+              <span class="text-red">Đóng cửa</span>, mở cửa lúc
+              <span class="font-weight-bold"> 7:00 AM</span>
+            </p>
+            <hr />
+          </div>
+          <div>
+            <h5 class="store-title">ShoeStore Quận 1</h5>
+            <p>
+              01 Lê Lợi, <br />
+              Quận 1, TP. Hồ Chí Minh <br />
+              <span class="text-red">Đóng cửa</span>, mở cửa lúc
+              <span class="font-weight-bold"> 7:00 AM</span>
+            </p>
+            <hr />
+          </div>
+          <div>
+            <h5 class="store-title">ShoeStore Dĩ An</h5>
+            <p>
+              01 Tô Vĩnh Diện, <br />
+              Phường Đông Hòa, TP. Dĩ An, Bình Dương<br />
+              <span class="text-red">Đóng cửa</span>, mở cửa lúc
+              <span class="font-weight-bold"> 7:00 AM</span>
+            </p>
+            <hr />
+          </div>
+          <div>
+            <h5 class="store-title">ShoeStore Thuận An</h5>
+            <p>
+              24 Lê Thị Trung, <br />
+              Phường Bình Chuẩn, TP. Thuận An, Bình Dương <br />
+              <span class="text-green">Mở cửa</span>, đóng cửa lúc
+              <span class="font-weight-bold"> 5:00 PM</span>
+            </p>
+            <hr />
+          </div>
+          <div>
+            <h5 class="store-title">ShoeStore Thủ Dầu Một</h5>
+            <p>
+              1 Lê Hồng Phong, <br />
+              Phường Phú Lợi, TP. Thủ Dầu Một, Bình Dương <br />
+              <span class="text-green">Mở cửa</span>, đóng cửa lúc
+              <span class="font-weight-bold"> 5:00 PM</span>
+            </p>
+            <hr />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div id="map" style="height: 800px"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiZHVuZ3RkIiwiYSI6ImNrdnM1bmlsaDA5eW0yb2szaHloODAwN2QifQ.bO5ITZpAP8-trHVfVz9SXg";
+      const map = new mapboxgl.Map({
+        container: "map", // container ID
+        style: "mapbox://styles/mapbox/streets-v11", // style URL
+        center: [106.80360126814175, 10.870346054728648], // starting position
+        zoom: 11, // starting zoom
+      });
+
+      const ThuDuc = new mapboxgl.Marker()
+        .setLngLat([106.80360126814175, 10.870346054728648])
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            "<h4>ShoeStore Thủ Đức</h4>" +
+              "<h5>Khu phố 6, Phường Linh Trung, TP. Thủ Đức</h5>" +
+              "<p>Đóng cửa, mở lúc 7:00 PM</p>"
+          )
+        )
+        .addTo(map);
+      const DiAn = new mapboxgl.Marker()
+        .setLngLat([106.78441493833427, 10.883593314289712])
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            "<h4>ShoeStore Dĩ An</h4>" +
+              "<h5>Tô Vĩnh Diện, Phường Đông Hòa, Dĩ An, Bình Dương</h5>" +
+              "<p>Đóng cửa, mở lúc 7:00 PM</p>"
+          )
+        )
+        .addTo(map);
+
+      const ThuanAn = new mapboxgl.Marker()
+        .setLngLat([106.72078630758763, 10.984492891282784])
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            "<h4>ShoeStore Thuận An</h4>" +
+              "<h5>DT743, Phường Bình Chuẩn, Thuận An, Bình Dương</h5>" +
+              "<p>Đóng cửa, mở lúc 7:00 PM</p>"
+          )
+        )
+        .addTo(map);
+
+      const ThuDauMot = new mapboxgl.Marker()
+        .setLngLat([106.67987903429893, 10.984372426536009])
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            "<h4>ShoeStore Thủ Dầu Một</h4>" +
+              "<h5>01 Lê Hồng Phong, Phường Phú Lợi, Thủ Dầu Một, Bình Dương</h5>" +
+              "<p>Đóng cửa, mở lúc 7:00 PM</p>"
+          )
+        )
+        .addTo(map);
+
+      const Quan1 = new mapboxgl.Marker()
+        .setLngLat([106.7026201489016, 10.776384295739621])
+        .setPopup(
+          new mapboxgl.Popup().setHTML(
+            "<h4>ShoeStore Quận 1</h4>" +
+              "<h5>01 Lê Lợi, Quận 1, TP. Hồ Chí Minh</h5>" +
+              "<p>Đóng cửa, mở lúc 7:00 PM</p>"
+          )
+        )
+        .addTo(map);
+
+      map.addControl(new mapboxgl.NavigationControl());
+
+      function flyTo(place) {
+        map.flyTo({
+          center: place.getLngLat(),
+          zoom: 14,
+        });
+        place.togglePopup();
+      }
+
+      $(".store-title").click(function () {
+        var position = $(this).html();
+        switch (position) {
+          case "ShoeStore Dĩ An":
+            flyTo(DiAn);
+            break;
+          case "ShoeStore Thủ Đức":
+            flyTo(ThuDuc);
+            break;
+          case "ShoeStore Thủ Dầu Một":
+            flyTo(ThuDauMot);
+            break;
+          case "ShoeStore Thuận An":
+            flyTo(ThuanAn);
+            break;
+          case "ShoeStore Quận 1":
+            flyTo(Quan1);
+            break;
+          default:
+            break;
+        }
+      });
+    });
+  </script>
+  <script src="../assets/js/owl.carousel.min.js"></script>
+</html>

@@ -6,6 +6,9 @@
   height: 60px !important;
   width: 60px !important;
 }
+.btn-size-active {
+  border-color: #000000;
+}
 .btn-addtocart {
   background-color: #e33b19;
   font-size: 20px;
@@ -36,7 +39,8 @@
   flex: 0 0 12.5%;
   max-width: 12.5%;
 }
-.active-image {
+.active-image,
+.pointer img {
   cursor: pointer;
 }
 .img-fluid {
@@ -44,6 +48,7 @@
 }
 .btn-light:hover {
   background-color: #ffffff;
+  border-color: #ffffff;
   opacity: 0.4;
 }
 a {
@@ -77,8 +82,10 @@ a:hover {
 }
 .nav-tabs {
   background-color: #ccc;
+  border-radius: 20px 20px 0 0;
 }
 .nav-item > .active {
+  border-radius: 20px 20px 0 0;
   background-color: #e33b19 !important;
   color: #ffffff !important;
 }
@@ -110,7 +117,8 @@ a:hover {
 }
 .rate:not(:checked) > input {
   position: absolute;
-  top: -9999px;
+  visibility: hidden;
+  top: -99999px;
 }
 .rate:not(:checked) > label {
   float: right;
@@ -140,6 +148,7 @@ a:hover {
 }
 
 .other-product {
+  margin: 0px -15px;
   position: relative;
 }
 
@@ -147,4 +156,44 @@ a:hover {
 .btn-forward {
   position: absolute;
   top: 0;
+  z-index: 1;
+}
+.btn-back {
+  margin-left: -30px;
+  left: 0;
+  top: 50%;
+}
+.btn-forward {
+  margin-right: -34px;
+  right: 0;
+  top: 50%;
+}
+.item-count-bg {
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.item-count {
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+.container {
+  position: relative;
+}
+.alert {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.breadcrumb {
+  background-color: #ffffff;
 }

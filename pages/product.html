@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" />
     <link
@@ -20,22 +21,12 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
     <link rel="stylesheet" href="../assets/css/product.css" />
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -162,7 +153,9 @@
             <!-- Size elements -->
             <div class="row">
               <div class="col-md-2 col-3 mb-2">
-                <button class="btn btn-size btn-outline-secondart">34</button>
+                <button class="btn btn-size btn-outline-secondart" disabled>
+                  34
+                </button>
               </div>
               <div class="col-md-2 col-3 mb-2">
                 <button class="btn btn-size btn-outline-secondart">35</button>
@@ -171,13 +164,17 @@
                 <button class="btn btn-size btn-outline-secondart">36</button>
               </div>
               <div class="col-md-2 col-3 mb-2">
-                <button class="btn btn-size btn-outline-secondart">37</button>
+                <button class="btn btn-size btn-outline-secondart" disabled>
+                  37
+                </button>
               </div>
               <div class="col-md-2 col-3 mb-2">
                 <button class="btn btn-size btn-outline-secondart">38</button>
               </div>
               <div class="col-md-2 col-3 mb-2">
-                <button class="btn btn-size btn-outline-secondart">39</button>
+                <button class="btn btn-size btn-outline-secondart" disabled>
+                  39
+                </button>
               </div>
               <div class="col-md-2 col-3 mb-2">
                 <button class="btn btn-size btn-outline-secondart">40</button>
@@ -189,10 +186,14 @@
                 <button class="btn btn-size btn-outline-secondart">42</button>
               </div>
               <div class="col-md-2 col-3 mb-2">
-                <button class="btn btn-size btn-outline-secondart">43</button>
+                <button class="btn btn-size btn-outline-secondart" disabled>
+                  43
+                </button>
               </div>
               <div class="col-md-2 col-3 mb-2">
-                <button class="btn btn-size btn-outline-secondart">44</button>
+                <button class="btn btn-size btn-outline-secondart" disabled>
+                  44
+                </button>
               </div>
               <div class="col-md-2 col-3 mb-2">
                 <button class="btn btn-size btn-outline-secondart">45</button>
@@ -206,21 +207,39 @@
             </div>
             <!-- Amount elements -->
             <div class="row">
-              <div class="col-md-1">
-                <button class="btn btn-amount btn-outline-secondart">-</button>
+              <div class="col-md-1 align-self-center">
+                <button
+                  id="btn-size-decrease"
+                  class="btn btn-amount btn-outline-secondart"
+                >
+                  -
+                </button>
               </div>
-              <div class="col-md-1 align-self-center">2</div>
-              <div class="col-md-1">
-                <button class="btn btn-amount btn-outline-secondart">+</button>
+              <div class="col-md-1 align-self-center float-right">
+                <div id="item-amount" class="text-centered">1</div>
+              </div>
+              <div class="col-md-1 float-left">
+                <button
+                  id="btn-size-increase"
+                  class="btn btn-amount btn-outline-secondart"
+                >
+                  +
+                </button>
               </div>
               <div class="col-md-6 align-self-center">
-                <div class="">Còn lại <span>2</span> sản phẩm</div>
+                <div class="float-left">
+                  Còn lại <span id="item-left">4</span> sản phẩm
+                </div>
               </div>
             </div>
             <!-- Button -->
             <div class="row mt-4">
               <div class="col-md-12">
+                <div class="item-count-bg">
+                  <p class="item-count">1</p>
+                </div>
                 <button
+                  id="addToCart"
                   class="btn btn-addtocart btn-outline-secondart btn-block"
                 >
                   Thêm vào giỏ hàng
@@ -228,6 +247,7 @@
               </div>
               <div class="col-md-12 mt-2">
                 <button
+                  id="addToFav"
                   class="btn btn-addtofav btn-outline-secondart btn-block"
                 >
                   Yêu thích
@@ -442,6 +462,7 @@
                 class="form-control mt-2"
                 id="exampleFormControlInput1"
                 placeholder="Tên của bạn"
+                r
               />
               <textarea
                 class="form-control mt-3"
@@ -453,21 +474,22 @@
                 <div class="col-md-12 align-self-center">
                   <div class="rate">
                     <input type="radio" id="star5" name="rate" value="5" />
-                    <label for="star5">5 stars</label>
+                    <label for="star5" title="text">5 stars</label>
                     <input type="radio" id="star4" name="rate" value="4" />
-                    <label for="star4">4 stars</label>
+                    <label for="star4" title="text">4 stars</label>
                     <input type="radio" id="star3" name="rate" value="3" />
-                    <label for="star3">3 stars</label>
+                    <label for="star3" title="text">3 stars</label>
                     <input type="radio" id="star2" name="rate" value="2" />
-                    <label for="star2">2 stars</label>
+                    <label for="star2" title="text">2 stars</label>
                     <input type="radio" id="star1" name="rate" value="1" />
-                    <label for="star1">1 star</label>
+                    <label for="star1" title="text">1 star</label>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
                   <button
+                    id="btnSendRating"
                     class="
                       btn btn-send btn-outline-secondart btn-block
                       float-right
@@ -483,12 +505,128 @@
       </div>
       <hr />
       <!-- OTHER PRODUCT -->
-      <div class="row justify-content-center mt-5">
-        <div class="col-md-auto">
+      <div class="row justify-content-center mt-5 other-product">
+        <div class="col-md-12">
           <h2>CÓ THỂ BẠN SẼ THÍCH</h2>
         </div>
 
-        <div class="col-md-12 other-product">
+        <div class="align-self-center">
+          <button
+            id="btn-back-other-product"
+            type="button"
+            class="btn btn-light btn-back"
+          >
+            <span class="material-icons"> arrow_back_ios </span>
+          </button>
+        </div>
+        <div class="col-md-12">
+          <div id="owl-carousel-other-product" class="owl-carousel">
+            <div>
+              <a href="#">
+                <img
+                  src="../assets/images/shoe_2.png"
+                  class="img-fluid"
+                  alt="Responsive image"
+                />
+                <h5 class="text-center">Track 6 OG - Low Top</h5>
+                <p class="text-center">Vintas</p>
+                <h5 class="text-center price">
+                  560.000 VNĐ
+                  <span class="discount">600.000 VNĐ</span>
+                </h5>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img
+                  src="../assets/images/shoe_3.png"
+                  class="img-fluid"
+                  alt="Responsive image"
+                />
+                <h5 class="text-center">Track 6 OG - Low Top</h5>
+                <p class="text-center">Vintas</p>
+                <h5 class="text-center price">560.000 VNĐ</h5>
+              </a>
+            </div>
+            <div>
+              <a href="#"
+                ><img
+                  src="../assets/images/shoe_4.png"
+                  class="img-fluid"
+                  alt="Responsive image"
+                />
+                <h5 class="text-center">Track 6 OG - Low Top</h5>
+                <p class="text-center">Vintas</p>
+                <h5 class="text-center price">
+                  560.000 VNĐ
+                  <span class="discount">600.000 VNĐ</span>
+                </h5></a
+              >
+            </div>
+            <div>
+              <a href="#">
+                <img
+                  src="../assets/images/shoe_5.png"
+                  class="img-fluid"
+                  alt="Responsive image"
+                />
+                <h5 class="text-center">Track 6 OG - Low Top</h5>
+                <p class="text-center">Vintas</p>
+                <h5 class="text-center price">560.000 VNĐ</h5>
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img
+                  src="../assets/images/shoe_2.png"
+                  class="img-fluid"
+                  alt="Responsive image"
+                />
+                <h5 class="text-center">Track 6 OG - Low Top</h5>
+                <p class="text-center">Vintas</p>
+                <h5 class="text-center price">560.000 VNĐ</h5>
+              </a>
+            </div>
+            <div>
+              <a href="#"
+                ><img
+                  src="../assets/images/shoe_2.png"
+                  class="img-fluid"
+                  alt="Responsive image"
+                />
+                <h5 class="text-center">Track 6 OG - Low Top</h5>
+                <p class="text-center">Vintas</p>
+                <h5 class="text-center price">
+                  560.000 VNĐ
+                  <span class="discount">600.000 VNĐ</span>
+                </h5></a
+              >
+            </div>
+            <div>
+              <a href="#">
+                <img
+                  src="../assets/images/shoe_2.png"
+                  class="img-fluid"
+                  alt="Responsive image"
+                />
+                <h5 class="text-center">Track 6 OG - Low Top</h5>
+                <p class="text-center">Vintas</p>
+                <h5 class="text-center price">560.000 VNĐ</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="align-self-center">
+          <button
+            id="btn-forward-other-product"
+            type="button"
+            class="btn btn-light btn-forward"
+          >
+            <span class="material-icons"> arrow_forward_ios </span>
+          </button>
+        </div>
+
+        <!-- <div class="col-md-12 other-product">
           <div id="owl-carousel-other-product" class="owl-carousel">
             <div>
               <a href="">
@@ -573,6 +711,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-6 text-right">
           <button
             id="btn-back-other-product"
@@ -590,7 +729,7 @@
           >
             <span class="material-icons"> arrow_forward_ios </span>
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -650,6 +789,19 @@
         </div>
       </div>
     </div>
+
+    <div class="alert alert-warning alert-dismissible fade" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those
+      fields below.
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
   </body>
 
   <!-- SCRIPT -->
@@ -657,6 +809,7 @@
     $(document).ready(function () {
       var owlProduct = $("#owl-carousel-product");
       var owlOtherProduct = $("#owl-carousel-other-product");
+      var item_amount = 1;
 
       $("#btn-back-product").click(function () {
         owlProduct.trigger("prev.owl.carousel");
@@ -674,12 +827,46 @@
         owlOtherProduct.trigger("next.owl.carousel");
       });
 
+      $("#btn-size-increase").click(function () {
+        var amount = parseInt($("#item-amount").html());
+        var item_left = parseInt($("#item-left").html());
+        amount++;
+        item_left--;
+        if (amount > 5) {
+          Swal.fire("Thất bại", "Sản phẩm đã đạt tới giới hạn mua", "warning");
+        } else {
+          $("#item-amount").html(amount);
+        }
+        if (item_left <= 0) {
+          item_left = 0;
+        }
+        $("#item-left").html(item_left);
+      });
+
+      $("#btn-size-decrease").click(function () {
+        var amount = parseInt($("#item-amount").html());
+        var item_left = parseInt($("#item-left").html());
+        item_left++;
+        if (amount == 0) {
+          amount = 0;
+        } else {
+          amount--;
+          $("#item-amount").html(amount);
+        }
+        if (item_left > 5) {
+          item_left = 5;
+        }
+        $("#item-left").html(item_left);
+      });
+
       owlProduct.owlCarousel({
         loop: true,
+        items: 4,
       });
 
       owlOtherProduct.owlCarousel({
         loop: true,
+        items: 4,
       });
 
       $(".inactive-image").click(function () {
@@ -690,8 +877,44 @@
         $("#viewImageModal").modal("show");
         var elmnt = $("#img4").scroll();
       });
+
+      $("#btnSendRating").click(function () {
+        Swal.fire("Thành công!", "Đánh giá của bạn đã được gửi đi!", "success");
+      });
+
+      $(".btn-size").click(function () {
+        $(".btn-size-active").removeClass("btn-size-active");
+        $(this).addClass("btn-size-active");
+        $("#item-amount").html("1");
+        $("#item-left").html("4");
+      });
+
+      $("#addToFav").click(function () {
+        $.bootstrapGrowl(
+          "<p>Đã thêm sản phẩm vào danh sách yêu thích! </p>" +
+            "<a href='#' class='font-weight-bold'>Xem chi tiết</a>",
+          {
+            type: "success",
+            width: 400,
+          }
+        );
+      });
+
+      $("#addToCart").click(function () {
+        $.bootstrapGrowl(
+          "<p>Đã thêm sản phẩm vào giỏ hàng! </p>" +
+            "<a href='#' class='font-weight-bold'>Xem giỏ hàng</a>",
+          {
+            type: "success",
+            width: 400,
+          }
+        );
+        $(".item-count-bg").addClass("invisible");
+      });
     });
   </script>
 
   <script src="../assets/js/owl.carousel.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js"></script>
 </html>
