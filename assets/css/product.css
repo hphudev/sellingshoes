@@ -1,3 +1,6 @@
+html {
+  font-size: 100%;
+}
 .price {
   color: #e33b19;
   font-weight: bold;
@@ -90,7 +93,7 @@ a:hover {
   color: #ffffff !important;
 }
 .nav-link {
-  font-size: 24px !important;
+  font-size: 22px !important;
 }
 .tab-pane {
   border-left: 1px solid #ddd;
@@ -196,4 +199,28 @@ a:hover {
 }
 .breadcrumb {
   background-color: #ffffff;
+}
+.breadcrumb-item {
+  font-size: 16px;
+}
+.breadcrumb-item:hover {
+  text-decoration: underline;
+}
+.size-chart {
+  color: #e33b19;
+}
+
+@media only screen and (max-width: 576px) {
+  h1 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  .nav-link {
+    font-size: 18px !important;
+  }
+  #btn-forward-product {
+    visibility: hidden;
+  }
 }
