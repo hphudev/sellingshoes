@@ -11,7 +11,7 @@
 	
 	<body>
 		<div class="content">
-			<div class="header coloredControl" id="lHeader">
+			<div class="header" id="lHeader">
 				<h1>Danh sách yêu thích</h1>
 			</div>
 
@@ -35,7 +35,7 @@
 										</li>
 
 										<li>
-											<div class="row detailShoe">Giá: 520.000 VNĐ</div>
+											<div class="row detailShoe" id="lPrice">Giá: 520.000 VNĐ</div>
 										</li>
 
 										<li>
@@ -48,7 +48,32 @@
 										<li>
 											<div class="row seperator detailShoe">
 												<div class="cell" id="tbSize"><strong>35</strong></div>
-												<div class="cell" id="tbAmount"><strong>2</strong></div>
+														
+												<div class="table cell controller" id="amountController">
+													<ul>
+														<li>
+															<div class="row bAdd">▲</div>
+														</li>
+
+														<li>
+															<div class="row bSubtract">▼</div>
+														</li>
+													</ul>
+												</div>
+
+												<div class="cell" id="tbAmount2"><strong>2</strong></div>
+														
+												<div class="table cell controller" id="sizeController2">
+													<ul>
+														<li>
+															<div class="row bAdd">▲</div>
+														</li>
+
+														<li>
+															<div class="row bSubtract">▼</div>
+														</li>
+													</ul>
+												</div>
 											</div>
 										</li>
 									</ul>

@@ -13,8 +13,8 @@ body
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 }
 
 #lCount
@@ -22,6 +22,12 @@ body
 	text-align: left;
 	margin-left: 11.5%;
 	padding-bottom: -10%;
+	color: #888888;
+}
+
+#lPrice
+{
+	color: #888888;
 }
 
 .myButton
@@ -35,6 +41,7 @@ body
 #lHeader
 {
 	margin: 0 0 2em;
+	background-color: #CCCCCC;
 }
 
 .myButton:hover, .myButton:visited
@@ -67,7 +74,12 @@ body
 
 .coloredControl
 {
-	background-color: #CC0000;
+	background-color: #000000;
+}
+
+.coloredControl2
+{
+	background-color: #FF6600;
 }
 
 .header
@@ -127,7 +139,7 @@ body
 
 .coloredText
 {
-	color: red;
+	color: #FF5500;
 	text-align: right;
 }
 
@@ -164,7 +176,7 @@ body
 #order
 {
 	text-align: left;
-	background-color: #111111;
+	background-color: #CCCCCC;
 	width: 30.5%;
 	margin-left: 12%;
 	margin-top: 2.5%;
@@ -194,7 +206,7 @@ body
 #tbDiscountCode
 {
 	border: 1px solid;
-	border-color: white;
+	border-color: black;
 	width: 70%;
 	float: left;
 }
@@ -221,4 +233,38 @@ body
 {
 	float: right;
 	margin-right: 4%;
+}
+
+.bAdd
+{
+	height: 20px;
+}
+
+.bSubtract
+{
+	height: 20px;
+}
+
+.controller
+{
+	width: 20px;
+	height: 40px;
+}
+
+#amountController
+{
+	margin-left: -4%;
+	margin-top: -2%;
+}
+
+#sizeController
+{
+	margin-left: -11%;
+	margin-top: -2%;
+	width: 20px;
+}
+
+#tbAmount
+{
+	margin-left: 56%;
 }
