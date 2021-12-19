@@ -509,7 +509,7 @@
         //Send feedback
         $(".btn-send-fb").click(function() {
             $("#fbModal").hide();
-            alert('Góp ý của bạn đã được ghi nhận!');
+            Swal.fire("Cảm ơn rất nhiều!", "Góp ý của bạn đã được ghi nhận!", "success");
         })
 
         //Danh mục dropdown
@@ -537,4 +537,5 @@
         }
     </script>
 </body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
