@@ -7,10 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/gethelp.css">
+    <link rel="stylesheet" href="./assets/css/news.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <title>Chính sách đổi trả</title>
+    <title>Chính sách đổi/trả</title>
     <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -38,12 +40,11 @@
                         </a>
                     </li>
                     <li class="topbar__item">
-                        <a class="topbar__item-link" href="#">
+                        <a class="topbar__item-link" href="#" onclick="showLoginModal()">
                             <i class="topbar__icon fas fa-user"></i>
                             Đăng nhập
                         </a>
                     </li>
- 
                 </ul>
             </div>
 
@@ -274,6 +275,128 @@
                     </div>
                 </div>
             </div>
+            <div id="mobile-nav">
+                <div class="mobile-nav__logo">T14 Store</div>
+                <div class="mobile-nav__menu-button"><span class="fas fa-bars"></span></div>
+                <!-- Favorite & Cart -->
+                <div class="mobile-nav__link-wrapper">
+                    <a href="#" class="mobile-nav__link">
+                        <i class="mobile-nav__icon far fa-heart"></i>
+                    </a>
+                    <a href="#" class="mobile-nav__link">
+                        <i class="mobile-nav__icon fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+                
+                <ul>
+                    <li class="mobile-nav__search">
+                        <input class="mobile-nav__search-input" type="text" placeholder="Tìm kiếm">
+                        <a href="#" class="mobile-nav__search-link"><i class="fas fa-search"></i></a>
+                    </li>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li class="mobile-nav__parent">
+                        <a href="#">Sản phẩm</a>
+                        <ul>
+                            <li><a href="#">Cho nam</a></li>
+                            <li><a href="#">Cho nữ</a></li>
+                            <li><a href="#">Mới nhất</a></li>
+                            <li><a href="#">Bán chạy</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__parent">
+                        <a href="#">Cho nam</a>
+                        <ul>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Giày</a>
+                                <ul>
+                                    <li><a href="#">Đang giảm giá</a></li>
+                                    <li><a href="#">Thể thao</a></li>
+                                    <li><a href="#">Thường ngày</a></li>
+                                    <li><a href="#">Chạy bộ</a></li>
+                                    <li><a href="#">Bóng rổ</a></li>
+                                    <li><a href="#">Tennis</a></li>
+                                    <li><a href="#">Đá bóng</a></li>
+                                    <li><a href="#">Lướt ván</a></li>
+                                    <li><a href="#">Sandals</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Phụ kiện</a>
+                                <ul>
+                                    <li><a href="#">Đang giảm giá</a></li>
+                                    <li><a href="#">Mắt kính</a></li>
+                                    <li><a href="#">Vòng tay</a></li>
+                                    <li><a href="#">Tất</a></li>
+                                    <li><a href="#">Nón</a></li>
+                                    <li><a href="#">Dây giày</a></li>
+                                    <li><a href="#">Balo</a></li>
+                                    <li><a href="#">Túi</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Thương hiệu</a>
+                                <ul>
+                                    <li><a href="#">Adidas</a></li>
+                                    <li><a href="#">Nike</a></li>
+                                    <li><a href="#">Converse</a></li>
+                                    <li><a href="#">Puma</a></li>
+                                    <li><a href="#">Vans</a></li>
+                                    <li><a href="#">Balenciaga</a></li>
+                                    <li><a href="#">Khác</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__parent">
+                        <a href="#">Cho nữ</a>
+                        <ul>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Giày</a>
+                                <ul>
+                                    <li><a href="#">Đang giảm giá</a></li>
+                                    <li><a href="#">Thể thao</a></li>
+                                    <li><a href="#">Thường ngày</a></li>
+                                    <li><a href="#">Chạy bộ</a></li>
+                                    <li><a href="#">Bóng rổ</a></li>
+                                    <li><a href="#">Tennis</a></li>
+                                    <li><a href="#">Đá bóng</a></li>
+                                    <li><a href="#">Lướt ván</a></li>
+                                    <li><a href="#">Sandals</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Phụ kiện</a>
+                                <ul>
+                                    <li><a href="#">Đang giảm giá</a></li>
+                                    <li><a href="#">Mắt kính</a></li>
+                                    <li><a href="#">Vòng tay</a></li>
+                                    <li><a href="#">Tất</a></li>
+                                    <li><a href="#">Nón</a></li>
+                                    <li><a href="#">Dây giày</a></li>
+                                    <li><a href="#">Balo</a></li>
+                                    <li><a href="#">Túi</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Thương hiệu</a>
+                                <ul>
+                                    <li><a href="#">Adidas</a></li>
+                                    <li><a href="#">Nike</a></li>
+                                    <li><a href="#">Converse</a></li>
+                                    <li><a href="#">Puma</a></li>
+                                    <li><a href="#">Vans</a></li>
+                                    <li><a href="#">Balenciaga</a></li>
+                                    <li><a href="#">Khác</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sale-off</a></li>
+                    <li><a href="#">Tra cứu đơn hàng</a></li>
+                    <li><a href="#">Tìm cửa hàng</a></li>
+                    <li onclick="showLoginModal()"><a href="#">Đăng nhập</a></li>
+                </ul>
+            </div>
         </div>
         <!-- END HEADER -->
     
@@ -452,9 +575,138 @@
             </div>
         </div>
 
-    </div>
+        <!-- Modals -->
 
+        <!-- Login -->
+        <div class="modal-login">
+            <div class="modal__login-container">
+                <button class="modal__close" onclick="hideLoginModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal__header">
+                    <p class="modal__header-title">ĐĂNG NHẬP</p>
+                </div>
+                <div class="modal__body">
+                    <input class="modal__input" type="text" placeholder="Email / Số điện thoại / Tên đăng nhập" style="margin-top: 0;">
+                    <input class="modal__input" type="password" placeholder="Mật khẩu">
+                    <button class="modal__button" onclick="hideLoginModal()">
+                        ĐĂNG NHẬP
+                    </button>
+                    <a href="#" class="modal__link">Quên mật khẩu</a>
+                </div>
+                <div class="login-with">
+                    <div class="login-with__title">ĐĂNG NHẬP VỚI</div>
+                    <div class="login-with__item" onclick="hideLoginModal()">
+                        <i  class="fab fa-facebook-f login-with__icon"></i>
+                        Facebook
+                    </div>
+                    <div style="right: 0;" class="login-with__item" onclick="hideLoginModal()">
+                        <i class="fab fa-google login-with__icon"></i>
+                        Google
+                    </div>
+                </div>
+                <div class="modal__suggestion">
+                    Bạn chưa có tài khoản ? <a href="#" class="modal__link-suggestion" onclick="registerNow()">Đăng ký ngay</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register -->
+        <div class="modal-register">
+            <div class="modal__register-container">
+                <button class="modal__close" onclick="hideRegisterModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal__header">
+                    <p class="modal__header-title">ĐĂNG KÝ</p>
+                    <div class="modal__body">
+                        <input class="modal__input" type="text" placeholder="Email / Số điện thoại / Tên đăng nhập" style="margin-top: 0;">
+                        <input class="modal__input" type="password" placeholder="Mật khẩu">
+                        <input class="modal__input" type="password" placeholder="Nhập lại mật khẩu">
+                        <div class="modal__name-fields">
+                            <input class="modal__name-input" type="text" placeholder="Họ">
+                            <input class="modal__name-input" type="text" placeholder="Tên">
+                        </div>
+                        <div class="modal__gender-section">
+                            <div>
+                                <input type="radio" id="modal__gender-male" name="modal__gender">
+                                <label for="modal__gender-male">Nam</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="modal__gender-female" name="modal__gender">
+                                <label for="modal__gender-female">Nữ</label>
+                            </div>
+                        </div>
+                        <div class="modal__term">
+                            <input type="checkbox">
+                            Tôi đã đọc và đồng ý với <a href="#">các điều khoản</a> 
+                        </div>
+                        <button class="modal__button" onclick="hideRegisterModal()">
+                            ĐĂNG KÝ
+                        </button>
+                        <div class="modal__suggestion">
+                            Bạn đã có tài khoản ? <a href="#" class="modal__link-suggestion" onclick="loginNow()">Đăng nhập ngay</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
     <script>
+        // Mobile menu
+        $(document).ready(function () {
+        // append plus symbol to every list item that has children
+        $('#mobile-nav .mobile-nav__parent').append('<span class="open-menu fa fa-plus"></span>');
+        
+        // fix non-scrolling overflow issue on mobile devices
+        $('#mobile-nav > ul').wrap('<div class="overflow"></div>');
+        $(window).on('load resize', function () {
+            var vph = $(window).height() - 57; // 57px - height of #mobile-nav
+            $('.overflow').css('max-height', vph);
+        });
+    
+        // global variables
+        var menu = $('.overflow > ul');
+        var bg = $('html, body');
+        
+        // toggle background scrolling
+        function bgScrolling() {
+            // if menu has toggled class... *
+            if (menu.hasClass('open')) {
+                // * disable background scrolling
+                bg.css({
+                    'overflow-y': 'hidden',
+                    'height': 'auto'
+                });
+            // if menu does not have toggled class... *
+            } else {
+                // * enable background scrolling
+                bg.css({
+                    'overflow-y': 'visible',
+                    'height': '100%'
+                });
+            }
+        }
+    
+        // menu button click events
+        $('.mobile-nav__menu-button').on('click', function (e) {
+            e.preventDefault();
+            // activate toggles
+            menu.slideToggle(250);
+            menu.toggleClass('open');
+            $(this).children().toggleClass('fa-bars fa-times');
+            bgScrolling();
+        });
+    
+        // list item click events
+        $('.open-menu').on('click', function (e) {
+            e.preventDefault();
+            $(this).prev('ul').slideToggle(250);
+            $(this).toggleClass('rotate');
+        });
+        });
         // Search click event
         function searchToggle(obj, evt) {
             const container = $(obj).closest('.search');
@@ -494,6 +746,50 @@
             }          
             slides[slideIndex-1].style.display = "block";
         }
+        // Modals
+        const loginModal =  document.querySelector(".modal-login");
+        const registerModal = document.querySelector(".modal-register");
+
+        const loginModalContainer = document.querySelector(".modal__login-container");
+        const registerModalContainer = document.querySelector(".modal__register-container");
+        
+        function showLoginModal() {
+            loginModal.classList.add('open-modal');
+        }
+
+        function hideLoginModal() {
+            loginModal.classList.remove('open-modal');
+        }
+
+        function showRegisterModal() {
+            registerModal.classList.add('open-modal');
+        }
+
+        function hideRegisterModal() {
+            registerModal.classList.remove('open-modal');
+        }
+
+        function registerNow() {
+            hideLoginModal();
+            showRegisterModal();
+        }
+
+        function loginNow() {
+            hideRegisterModal();
+            showLoginModal();
+        }
+
+        // Hide modal whenever click outside
+
+        loginModal.addEventListener('click', hideLoginModal);
+        loginModalContainer.addEventListener('click', function (event) {
+            event.stopPropagation();    
+        });
+
+        registerModal.addEventListener('click', hideRegisterModal);
+        registerModalContainer.addEventListener('click', function (event) {
+            event.stopPropagation();    
+        });
 
         //Show feedback modal
         $('#btnFeedback').click(function() {
