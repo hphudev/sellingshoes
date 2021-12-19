@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <title>Tin tức</title>
+    <title>Làm sao để đổi/trả sản phẩm?</title>
     <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous">
     </script>
 </head>
+
 <body>
     <div class="app">
         <!-- BEGIN HEADER -->
@@ -39,12 +40,11 @@
                         </a>
                     </li>
                     <li class="topbar__item">
-                        <a class="topbar__item-link" href="#">
+                        <a class="topbar__item-link" href="#" onclick="showLoginModal()">
                             <i class="topbar__icon fas fa-user"></i>
                             Đăng nhập
                         </a>
                     </li>
- 
                 </ul>
             </div>
 
@@ -275,6 +275,128 @@
                     </div>
                 </div>
             </div>
+            <div id="mobile-nav">
+                <div class="mobile-nav__logo">T14 Store</div>
+                <div class="mobile-nav__menu-button"><span class="fas fa-bars"></span></div>
+                <!-- Favorite & Cart -->
+                <div class="mobile-nav__link-wrapper">
+                    <a href="#" class="mobile-nav__link">
+                        <i class="mobile-nav__icon far fa-heart"></i>
+                    </a>
+                    <a href="#" class="mobile-nav__link">
+                        <i class="mobile-nav__icon fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+                
+                <ul>
+                    <li class="mobile-nav__search">
+                        <input class="mobile-nav__search-input" type="text" placeholder="Tìm kiếm">
+                        <a href="#" class="mobile-nav__search-link"><i class="fas fa-search"></i></a>
+                    </li>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li class="mobile-nav__parent">
+                        <a href="#">Sản phẩm</a>
+                        <ul>
+                            <li><a href="#">Cho nam</a></li>
+                            <li><a href="#">Cho nữ</a></li>
+                            <li><a href="#">Mới nhất</a></li>
+                            <li><a href="#">Bán chạy</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__parent">
+                        <a href="#">Cho nam</a>
+                        <ul>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Giày</a>
+                                <ul>
+                                    <li><a href="#">Đang giảm giá</a></li>
+                                    <li><a href="#">Thể thao</a></li>
+                                    <li><a href="#">Thường ngày</a></li>
+                                    <li><a href="#">Chạy bộ</a></li>
+                                    <li><a href="#">Bóng rổ</a></li>
+                                    <li><a href="#">Tennis</a></li>
+                                    <li><a href="#">Đá bóng</a></li>
+                                    <li><a href="#">Lướt ván</a></li>
+                                    <li><a href="#">Sandals</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Phụ kiện</a>
+                                <ul>
+                                    <li><a href="#">Đang giảm giá</a></li>
+                                    <li><a href="#">Mắt kính</a></li>
+                                    <li><a href="#">Vòng tay</a></li>
+                                    <li><a href="#">Tất</a></li>
+                                    <li><a href="#">Nón</a></li>
+                                    <li><a href="#">Dây giày</a></li>
+                                    <li><a href="#">Balo</a></li>
+                                    <li><a href="#">Túi</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Thương hiệu</a>
+                                <ul>
+                                    <li><a href="#">Adidas</a></li>
+                                    <li><a href="#">Nike</a></li>
+                                    <li><a href="#">Converse</a></li>
+                                    <li><a href="#">Puma</a></li>
+                                    <li><a href="#">Vans</a></li>
+                                    <li><a href="#">Balenciaga</a></li>
+                                    <li><a href="#">Khác</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__parent">
+                        <a href="#">Cho nữ</a>
+                        <ul>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Giày</a>
+                                <ul>
+                                    <li><a href="#">Đang giảm giá</a></li>
+                                    <li><a href="#">Thể thao</a></li>
+                                    <li><a href="#">Thường ngày</a></li>
+                                    <li><a href="#">Chạy bộ</a></li>
+                                    <li><a href="#">Bóng rổ</a></li>
+                                    <li><a href="#">Tennis</a></li>
+                                    <li><a href="#">Đá bóng</a></li>
+                                    <li><a href="#">Lướt ván</a></li>
+                                    <li><a href="#">Sandals</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Phụ kiện</a>
+                                <ul>
+                                    <li><a href="#">Đang giảm giá</a></li>
+                                    <li><a href="#">Mắt kính</a></li>
+                                    <li><a href="#">Vòng tay</a></li>
+                                    <li><a href="#">Tất</a></li>
+                                    <li><a href="#">Nón</a></li>
+                                    <li><a href="#">Dây giày</a></li>
+                                    <li><a href="#">Balo</a></li>
+                                    <li><a href="#">Túi</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__parent">
+                                <a href="#">Thương hiệu</a>
+                                <ul>
+                                    <li><a href="#">Adidas</a></li>
+                                    <li><a href="#">Nike</a></li>
+                                    <li><a href="#">Converse</a></li>
+                                    <li><a href="#">Puma</a></li>
+                                    <li><a href="#">Vans</a></li>
+                                    <li><a href="#">Balenciaga</a></li>
+                                    <li><a href="#">Khác</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sale-off</a></li>
+                    <li><a href="#">Tra cứu đơn hàng</a></li>
+                    <li><a href="#">Tìm cửa hàng</a></li>
+                    <li onclick="showLoginModal()"><a href="#">Đăng nhập</a></li>
+                </ul>
+            </div>
         </div>
         <!-- END HEADER -->
     
@@ -297,51 +419,82 @@
             </div>
             
             <div class="content">
-                <img class="img-cover" src="./assets/images/news_cover2.jpg" alt="Cover"/>
-                
                 <div class="grid-full-width sm-w-90">
                     <div class="grid">
-                        <div class="news-title-container grid-full-width">
-                            <h1 class="title-main" style="white-space: pre-line">CONVERSE ALL STAR</h1>
-                            <h1 class="title-sub" style="white-space: pre-line; font-weight: lighter;">CÂU CHUYỆN ĐẰNG SAU BIỂU TƯỢNG CHUCK TAYLOR</h1>
-                        </div>
-        
-                        <div class="grid-full-width grid__row">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                            <span class="content-text" style="font-style: italic;">28/10/2021 | Admin</span>
-                        </div>
-        
-                        <div class="news-content-container grid-full-width">
-                            <p class="content-text">Giày Converse All Star, còn được gọi là Chuck Taylors, là đôi giày thông thường đã đóng một vai trò quan trọng trong văn hóa nhạc pop trong nhiều thập kỷ. Ban đầu được thiết kế như một chiếc giày bóng rổ vào đầu những năm 1900, kiểu dáng mềm mại bằng cotton và cao su của giày Converse nhìn chung vẫn không bị thay đổi nhiều trong thế kỷ qua.</p>
-                            <p class="content-text"><br></p>
-                            <img class="image-full-width mt-mb-12" src="./assets/images/converse_gif.gif" alt="Converse All Star">
-                            <p class="content-text"><br></p>
-        
-                            <p class="heading">Gặp Chuck Taylor</p>
-                            <p class="content-text">Giày Converse All Star được phát hành lần đầu tiên vào năm 1917 và ngôi sao bóng rổ Charles "Chuck" Taylor trở thành nhân viên bán giày Converse vào năm 1921. Trong vòng một năm, anh đã truyền cảm hứng cho việc tái cấu trúc giày bóng rổ của thương hiệu, dẫn đến biệt danh "Chuck Taylors". Converse cũng đã thêm chữ ký của Taylor và miếng vá toàn sao vào bên cạnh giày để ám chỉ vận động viên này đã truyền cảm hứng cho họ.</p>
-                            <p class="content-text"><br></p>
-                            <img class="image-full-width mt-mb-12" src="./assets/images/news_photo7.jpg" alt="Yellow Flame">
-                            <p class="content-text"><br></p>
-                            <p class="content-text">Trong thời gian này, giày Converse All Star chủ yếu là một đôi giày bóng rổ và Taylor đã quảng cáo nó như vậy. Anh đi khắp nước Mỹ tiến hành các buổi chơi bóng rổ để bán giày thể thao. Trên thực tế, Converse All Stars là giày bóng rổ chính thức của các trò chơi Olympic trong hơn 30 năm. Sau này, trong Thế chiến II, chúng là chiếc giày thể thao chính thức của lực lượng vũ trang U. S. Chuck Taylors trở thành mẫu giày được lựa chọn cho các sự kiện thể thao nói chung, từ lớp thể dục đến vận động viên chuyên nghiệp.</p>
-                            <p class="content-text"><br></p>
-                            <img class="image-full-width mt-mb-12" src="./assets/images/news_photo8.jpg" alt="Yellow Flame">
-                            <p class="content-text"><br></p>
-        
-                            <p class="heading">Converse đi vào cuộc sống thường ngày</p>
-                            <div class="grid__row two-items-on-row">
-                                <p class="content-text">Đến cuối những năm 1960, giày Converse chiếm 80% thị trường sneaker nói chung. Sự thay đổi sang giày thể thao thông thường đã củng cố Converse All Stars như một biểu tượng văn hóa của mọi người, không chỉ là của giới thể thao nữa. Mặc dù những chiếc Chucks ban đầu có màu đen và trắng cổ điển, chúng dần có thêm một loạt các màu sắc và kiểu dáng cũng như các phiên bản giới hạn và đặc biệt. Giày cũng đa dạng về họa tiết và chất liệu như da lộn và da cùng với kiểu dáng cotton nguyên bản.</p>
-                                <img class="mt-mb-12" src="./assets/images/news_photo9.jpg" alt="Yellow Flame">
-                                <img class="mt-mb-12" src="./assets/images/news_photo10.jpg" alt="Yellow Flame">
-                                <p class="content-text">Giày Converse All Star bắt đầu mất đi sự thống trị của mình vào những năm 1970 khi những đôi giày khác, nhiều loại có hỗ trợ vòm tốt hơn, tạo ra sự cạnh tranh. Chẳng mấy chốc, các vận động viên ưu tú đã dừng sử dụng giày thể thao All Stars. Tuy nhiên, Chuck Taylors đã nhanh chóng được các nghệ sĩ và nhạc sĩ chọn làm biểu tượng cho những người bình thường. Nhân vật Rocky Balboa đã sử dụng Chucks trong bộ phim Rocky và Ramones thường xuyên dùng Chucks vì chúng không đắt tiền. Elvis Presley, Michael Meyers và Michael J. Fox đều sử dụng Chucks trong các bộ phim của họ, tiếp thị giày sneaker như một chiếc giày cho phiến quân trẻ. Giày Converse đã trở thành một biểu tượng của văn hóa U. S. khi có kiểu dáng retro phù hợp với phong cách cá tính của thời đại nhạc punk rock.</p>
+                        <div class="get-help-container">
+                            <h1 class="get-help-title">CÂU HỎI THƯỜNG GẶP</h1>
+
+                            <div class="search-box">
+                                <div class="seach-input-container">
+                                    <span class="icon">
+                                        <svg fill="#757575" height="20px" width="32px" aria-hidden="true" role="img" viewBox="0 0 24 24"><title>searchIcon</title><path d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39zM11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7z"></path></svg>
+                                    </span>
+                                    <input type="text" id="search" placeholder="Tìm kiếm..." />
+                                </div>
                             </div>
-        
-                            <p class="heading">Nike mua Converse</p>
-                            <p class="content-text">Mặc dù giày Converse Chuck Taylor rất nổi tiếng, hoạt động kinh doanh của Converse đã thất bại, dẫn đến nhiều tuyên bố phá sản. Vào năm 2003, Nike Incorporated đã mua Converse với giá $ 305 triệu và nạp tiền cho doanh nghiệp. Nike đã mang sản phẩm của Converse ra nước ngoài, nơi phần lớn các sản phẩm khác của Nike được sản xuất. Động thái này đã giảm chi phí sản xuất và tăng lợi nhuận của Converse.</p>
-        
-                            <p class="heading">Chuck Taylor ngày nay</p>
-                            <p class="content-text">Giày Converse Chuck Taylor cao và thấp cổ vẫn phổ biến. Vào năm 2015, Converse đã phát hành một bộ sưu tập Chuck Taylors lấy cảm hứng từ Andy Warhol, một sự lựa chọn quan trọng, vì Warhol nổi tiếng với những mô tả nghệ thuật pop về văn hóa đại chúng U. S. Trong năm 2017, giày Converse Chuck Taylor Low Top là đôi giày sneaker bán chạy thứ hai tại Hoa Kỳ và trong lịch sử luôn nằm trong top 10 sản phẩm bán chạy nhất. Giá thành của giày đóng phần lớn dẫn đến sự phổ biến của nó, nhưng việc marketing và lịch sử của giày như một khía cạnh của văn hóa nhạc pop mang lại cho nó sức mạnh để tồn tại lâu và bền bỉ.</p>
-                            <p class="content-text"><br></p>
-                            <img class="image-full-width mt-mb-12" src="./assets/images/news_cover1.jpg" alt="Yellow Flame">
+
+                            <div class="section-container grid-full-width">
+                                <h1 class="section-list-title">Làm sao để đổi/trả sản phẩm?</h1>
+
+                                <p class="content-text"><strong>Lưu ý: Chúng tôi rất tiếc hiện tại chưa thể thực hiện đổi hàng. Nếu quý khách có nhu cầu đổi sang sản phẩm khác, vui lòng thực hiện hoàn trả sản phẩm và tiến hành đặt lại đơn hàng mới.</strong></p>
+                                <br>
+                                <p class="content-text">* QUY TRÌNH TRẢ HÀNG - HOÀN TIỀN CHO CÁC ĐƠN HÀNG TRỰC TUYẾN ĐƯỢC THANH TOÁN BẰNG TIỀN MẶT KHI GIAO HÀNG TẬN NƠI (COD):</p>
+                                <img class="image-full-width mt-mb-12" src="./assets/images/return_process.png" alt="Quy trình trả hàng - hoàn tiền">
+
+                                <p class="content-text"><strong>BƯỚC 1: KIỂM TRA ĐIỀU KIỆN TRẢ HÀNG</strong></p>
+                                <p class="content-text">Trong vòng 14 ngày kể từ ngày nhận hàng.</p>
+                                <p class="content-text">Sản phẩm trong tình trạng mới, nguyên vẹn, với tag giá sản phẩm đính kèm còn nguyên.</p>
+                                <p class="content-text">Chưa qua sử dụng, chỉnh sửa và chưa qua giặt giũ.</p>
+
+                                <br>
+                                
+                                <p class="content-text"><strong>BƯỚC 2: ĐIỀN VÀO PHIẾU TRẢ HÀNG (BẮT BUỘC)</strong></p>
+                                <p class="content-text">Cùng với các mặt hàng đã đặt hàng của bạn, có 1 Phiếu Trả Hàng và 1 Danh Sách Đóng Gói được gửi kèm trong bưu kiện.</p>
+                                <p class="content-text">Vui lòng điền vào Phiếu Trả Hàng bằng cách chọn mặt hàng bạn muốn trả lại, lý do trả lại và các chi tiết khác.</p>
+                                <p class="content-text">Nếu bạn không thể tìm thấy Phiếu Trả Hàng trong bưu kiện của mình, vui lòng liên hệ với Trung Tâm Khách Hàng của chúng tôi để được hỗ trợ, trước khi tiến hành trả hàng.</p>
+                                <p class="content-text">Xin lưu ý rằng nếu không có Phiếu Trả Hàng, chúng tôi sẽ không thể tiến hành bất kỳ bước nào khác.</p>
+                                
+                                <br>
+
+                                <p class="content-text"><strong>BƯỚC 3: ĐÓNG GÓI VÀ GỬI SẢN PHẨM VỀ KHO</strong></p>
+                                <p class="content-text">Đóng gói các sản phẩm cần hoàn trả lại bằng cách sử dụng chính hộp chuyển phát đã nhận hoặc bất kỳ bao bì nào phù hợp và vừa vặn với các sản phẩm của bạn. Bạn có thể sử dụng bất kỳ công ty chuyển phát nhanh nào để vận chuyển các mặt hàng trở lại kho của chúng tôi.</p>
+                                <p class="content-text">Vui lòng tìm địa chỉ kho hàng tiếp nhận đổi trả của chúng tôi trên Phiếu trả hàng của bạn hoặc ở cuối bài viết này.</p>
+
+                                <br>
+
+                                <p class="content-text"><strong>BƯỚC 4: XÁC NHẬN TÀI KHOẢN NGÂN HÀNG CỦA KHÁCH HÀNG</strong></p>
+                                <p class="content-text">Sau khi kho hàng của chúng tôi nhận được hàng đã trả lại cùng với Phiếu Trả Hàng của bạn, chúng tôi sẽ liên hệ với bạn để xác nhận thông tin tài khoản ngân hàng.</p>
+
+                                <br>
+
+                                <p class="content-text"><strong>BƯỚC 5: XÁC NHẬN HOÀN TIỀN</strong></p>
+                                <p class="content-text">Sau khi chúng tôi thu thập tài khoản ngân hàng của bạn, số tiền sẽ được chuyển vào tài khoản do bạn cung cấp, trong vòng 7-14 ngày làm việc.</p>
+
+                                <br>
+
+                                <p class="content-text" style="color: var(--main-color);"><strong>* ĐỊA CHỈ KHO TIẾP NHẬN ĐỔI TRẢ</strong></p>
+                                <p class="content-text"><strong>Bộ phận Tiếp nhận đổi trả, Nhóm 14 GTNM</strong></p>
+                                <p class="content-text">Địa chỉ: Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh.</p>
+                                <p class="content-text">Thời gian hoạt động từ: 09:00 AM đến 06:00 PM, từ Thứ 2 đến Thứ 7.</p>
+                                <p class="content-text">Số điện thoại người nhận: 0909.000.999</p>
+
+                                <br>
+                                <div class="article-feedback">
+                                    <p class="content-text">Câu trả lời này có hữu ích không?</p>
+                                    <div class="section-list" style="flex-direction: row;">
+                                        <div class="feedback-thumb" tabindex="0">
+                                            <svg class="btn-thumb" fill="#111" height="30px" width="30px" viewBox="0 0 20 32">
+                                                <path d="M4.16 16.4q.8-1.28 1.6-2.64l.48-.64q1.52-2.16 1.88-2.64T9.28 8.4l.32-.64q.08-.08.16-.64.16-1.36.48-2Q10.64 4 11.52 4q1.2 0 1.76.88.48.8.48 1.84 0 .88-.88 3.2l-.32.88q-.16.56-.24 1.52l-.16.8h2.8l.88.08q.96.08 1.68.32 1.04.24 1.44.72.48.64.56 1.36.08.48 0 1.28l-.96 8q-.24 2-1.92 2.72-.96.4-2.48.4H0V16.4h4.16z"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="feedback-thumb" tabindex="0">
+                                            <svg class="btn-thumb" fill="#111" height="30px" width="30px" viewBox="0 0 20 32">
+                                                <path d="M5.76 18.16l-1.6-2.56H0V4h14.16l.64.08q.72.08 1.44.32.88.32 1.44.88.72.8.88 1.84l.96 7.92q.08.8 0 1.28-.08.8-.6 1.48t-1.8.84q-.64.16-2.16.16h-2.8l.16.88q.08.96.24 1.44l.32.96q.88 2.32.88 3.2 0 1.04-.48 1.84-.56.88-1.76.88-.88 0-1.28-1.12-.32-.64-.48-2-.08-.64-.16-.72l-.32-.72q-.8-1.52-1.2-2.04t-2-2.76z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                <div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -446,9 +599,139 @@
                 <p>Copyright © 2021 Team 14 GTNM. All rights reserved.</p>
             </div>
         </div>
+
+        <!-- Modals -->
+
+        <!-- Login -->
+        <div class="modal-login">
+            <div class="modal__login-container">
+                <button class="modal__close" onclick="hideLoginModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal__header">
+                    <p class="modal__header-title">ĐĂNG NHẬP</p>
+                </div>
+                <div class="modal__body">
+                    <input class="modal__input" type="text" placeholder="Email / Số điện thoại / Tên đăng nhập" style="margin-top: 0;">
+                    <input class="modal__input" type="password" placeholder="Mật khẩu">
+                    <button class="modal__button" onclick="hideLoginModal()">
+                        ĐĂNG NHẬP
+                    </button>
+                    <a href="#" class="modal__link">Quên mật khẩu</a>
+                </div>
+                <div class="login-with">
+                    <div class="login-with__title">ĐĂNG NHẬP VỚI</div>
+                    <div class="login-with__item" onclick="hideLoginModal()">
+                        <i  class="fab fa-facebook-f login-with__icon"></i>
+                        Facebook
+                    </div>
+                    <div style="right: 0;" class="login-with__item" onclick="hideLoginModal()">
+                        <i class="fab fa-google login-with__icon"></i>
+                        Google
+                    </div>
+                </div>
+                <div class="modal__suggestion">
+                    Bạn chưa có tài khoản ? <a href="#" class="modal__link-suggestion" onclick="registerNow()">Đăng ký ngay</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register -->
+        <div class="modal-register">
+            <div class="modal__register-container">
+                <button class="modal__close" onclick="hideRegisterModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal__header">
+                    <p class="modal__header-title">ĐĂNG KÝ</p>
+                    <div class="modal__body">
+                        <input class="modal__input" type="text" placeholder="Email / Số điện thoại / Tên đăng nhập" style="margin-top: 0;">
+                        <input class="modal__input" type="password" placeholder="Mật khẩu">
+                        <input class="modal__input" type="password" placeholder="Nhập lại mật khẩu">
+                        <div class="modal__name-fields">
+                            <input class="modal__name-input" type="text" placeholder="Họ">
+                            <input class="modal__name-input" type="text" placeholder="Tên">
+                        </div>
+                        <div class="modal__gender-section">
+                            <div>
+                                <input type="radio" id="modal__gender-male" name="modal__gender">
+                                <label for="modal__gender-male">Nam</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="modal__gender-female" name="modal__gender">
+                                <label for="modal__gender-female">Nữ</label>
+                            </div>
+                        </div>
+                        <div class="modal__term">
+                            <input type="checkbox">
+                            Tôi đã đọc và đồng ý với <a href="#">các điều khoản</a> 
+                        </div>
+                        <button class="modal__button" onclick="hideRegisterModal()">
+                            ĐĂNG KÝ
+                        </button>
+                        <div class="modal__suggestion">
+                            Bạn đã có tài khoản ? <a href="#" class="modal__link-suggestion" onclick="loginNow()">Đăng nhập ngay</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </div>
-    
     <script>
+        // Mobile menu
+        $(document).ready(function () {
+        // append plus symbol to every list item that has children
+        $('#mobile-nav .mobile-nav__parent').append('<span class="open-menu fa fa-plus"></span>');
+        
+        // fix non-scrolling overflow issue on mobile devices
+        $('#mobile-nav > ul').wrap('<div class="overflow"></div>');
+        $(window).on('load resize', function () {
+            var vph = $(window).height() - 57; // 57px - height of #mobile-nav
+            $('.overflow').css('max-height', vph);
+        });
+    
+        // global variables
+        var menu = $('.overflow > ul');
+        var bg = $('html, body');
+        
+        // toggle background scrolling
+        function bgScrolling() {
+            // if menu has toggled class... *
+            if (menu.hasClass('open')) {
+                // * disable background scrolling
+                bg.css({
+                    'overflow-y': 'hidden',
+                    'height': 'auto'
+                });
+            // if menu does not have toggled class... *
+            } else {
+                // * enable background scrolling
+                bg.css({
+                    'overflow-y': 'visible',
+                    'height': '100%'
+                });
+            }
+        }
+    
+        // menu button click events
+        $('.mobile-nav__menu-button').on('click', function (e) {
+            e.preventDefault();
+            // activate toggles
+            menu.slideToggle(250);
+            menu.toggleClass('open');
+            $(this).children().toggleClass('fa-bars fa-times');
+            bgScrolling();
+        });
+    
+        // list item click events
+        $('.open-menu').on('click', function (e) {
+            e.preventDefault();
+            $(this).prev('ul').slideToggle(250);
+            $(this).toggleClass('rotate');
+        });
+        });
         // Search click event
         function searchToggle(obj, evt) {
             const container = $(obj).closest('.search');
@@ -488,6 +771,50 @@
             }          
             slides[slideIndex-1].style.display = "block";
         }
+        // Modals
+        const loginModal =  document.querySelector(".modal-login");
+        const registerModal = document.querySelector(".modal-register");
+
+        const loginModalContainer = document.querySelector(".modal__login-container");
+        const registerModalContainer = document.querySelector(".modal__register-container");
+        
+        function showLoginModal() {
+            loginModal.classList.add('open-modal');
+        }
+
+        function hideLoginModal() {
+            loginModal.classList.remove('open-modal');
+        }
+
+        function showRegisterModal() {
+            registerModal.classList.add('open-modal');
+        }
+
+        function hideRegisterModal() {
+            registerModal.classList.remove('open-modal');
+        }
+
+        function registerNow() {
+            hideLoginModal();
+            showRegisterModal();
+        }
+
+        function loginNow() {
+            hideRegisterModal();
+            showLoginModal();
+        }
+
+        // Hide modal whenever click outside
+
+        loginModal.addEventListener('click', hideLoginModal);
+        loginModalContainer.addEventListener('click', function (event) {
+            event.stopPropagation();    
+        });
+
+        registerModal.addEventListener('click', hideRegisterModal);
+        registerModalContainer.addEventListener('click', function (event) {
+            event.stopPropagation();    
+        });
 
         //Show feedback modal
         $('#btnFeedback').click(function() {
