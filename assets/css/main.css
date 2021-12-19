@@ -637,9 +637,8 @@
 
 .latest-products__list{
     width: 85%;
-    height: 400px;
+    height: 600px;
     margin: 0 auto;
-    background-color: gray;
 }
 
 /* Best seller products */
@@ -650,9 +649,8 @@
 
 .best-seller-products__list{
     width: 85%;
-    height: 400px;
+    height: 600px;
     margin: 0 auto;
-    background-color: gray;
 }
 
 /* Feedbacks */

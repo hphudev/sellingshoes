@@ -3,6 +3,7 @@ var max_item = 0;
 
 function addToCart() {
     $("#item-amount").html("1");
+    $(".btn-size-active").removeClass("btn-size-active");
     $("#item-left").html(max_item);
     $.bootstrapGrowl(
         "<p>Đã thêm sản phẩm vào giỏ hàng! </p>" +
@@ -11,8 +12,8 @@ function addToCart() {
           type: "success",
           width: 400,
         }
-      );
-      $(".item-count-bg").addClass("invisible");
+    );
+    $(".item-count-bg").addClass("invisible");
 }
 
 function addToFav() {
@@ -28,8 +29,6 @@ function addToFav() {
 
 function sendRating() {
     Swal.fire("Thành công!", "Đánh giá của bạn đã được gửi đi!", "success");
-
-
 }
 
 function sizeIncrease() {
@@ -66,10 +65,10 @@ function sizeDecrease () {
     $("#item-left").html(item_left);
 }
 
-function sizeClick() {
+function sizeClick(size) {
     max_item = Math.floor(Math.random() * 20) + 1;
     $(".btn-size-active").removeClass("btn-size-active");
-    $(this).addClass("btn-size-active");
+    size.addClass("btn-size-active");
     $("#item-amount").html("1");
     $("#item-left").html(max_item);
     $(".item-count-bg").removeClass("invisible");

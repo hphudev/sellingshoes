@@ -46,6 +46,9 @@ html {
 .pointer img {
   cursor: pointer;
 }
+#mobile-nav {
+  z-index: 10;
+}
 .img-fluid {
   padding: 4px;
 }
@@ -214,8 +217,17 @@ a:hover {
   h1 {
     font-size: 28px;
   }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 22px;
+  }
   h5 {
     font-size: 20px;
+  }
+  p {
+    font-size: 18px;
   }
   .nav-link {
     font-size: 18px !important;
