@@ -537,10 +537,10 @@
             </div>
             <!-- Favorite & Cart -->
             <div class="navbar__cart-wrapper">
-              <a href="#" class="navbar__cart-link">
+              <a href="./loveList/index.html" class="navbar__cart-link">
                 <i class="navbar__cart-icon far fa-heart"></i>
               </a>
-              <a href="#" class="navbar__cart-link">
+              <a href="./cart/index.html" class="navbar__cart-link">
                 <i class="navbar__cart-icon fas fa-shopping-cart"></i>
               </a>
             </div>
@@ -553,10 +553,10 @@
           </div>
           <!-- Favorite & Cart -->
           <div class="mobile-nav__link-wrapper">
-            <a href="#" class="mobile-nav__link">
+            <a href="./loveList/" class="mobile-nav__link">
               <i class="mobile-nav__icon far fa-heart"></i>
             </a>
-            <a href="#" class="mobile-nav__link">
+            <a href="./cart/index.html" class="mobile-nav__link">
               <i class="mobile-nav__icon fas fa-shopping-cart"></i>
             </a>
           </div>
@@ -574,7 +574,7 @@
             </li>
             <li><a href="#">Trang chủ</a></li>
             <li class="mobile-nav__parent">
-              <a href="#">Sản phẩm</a>
+              <a href="./listProduct/index.html">Sản phẩm</a>
               <ul>
                 <li><a href="#">Cho nam</a></li>
                 <li><a href="#">Cho nữ</a></li>
@@ -671,7 +671,7 @@
               </ul>
             </li>
             <li><a href="#">Sale-off</a></li>
-            <li><a href="#">Tra cứu đơn hàng</a></li>
+            <li><a href="./lookUpBill/index.html">Tra cứu đơn hàng</a></li>
             <li><a href="./pages/maps.html">Tìm cửa hàng</a></li>
             <li onclick="showLoginModal()"><a href="#">Đăng nhập</a></li>
           </ul>
@@ -1096,10 +1096,10 @@
             <span class="footer__title">Tiện ích</span>
             <ul class="footer__list">
               <li class="footer__item">
-                <a href="#" class="footer__link" onlick="showLoginModal()">Đăng nhập</a>
+                <a href="#" class="footer__link" onclick="showLoginModal()">Đăng nhập</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">Tra cứu đơn hàng</a>
+                <a href="./lookUpBill/index.html" class="footer__link">Tra cứu đơn hàng</a>
               </li>
               <li class="footer__item">
                 <a href="./pages/maps.html" class="footer__link"
@@ -1112,7 +1112,7 @@
             <span class="footer__title">Về chúng tôi</span>
             <ul class="footer__list">
               <li class="footer__item">
-                <a href="#" class="footer__link">Chính sách mua hàng</a>
+                <a href="" class="footer__link">Chính sách mua hàng</a>
               </li>
               <li class="footer__item">
                 <a href="#" class="footer__link">Chính sách bảo hành</a>
@@ -1126,10 +1126,10 @@
             <span class="footer__title">Trợ giúp</span>
             <ul class="footer__list">
               <li class="footer__item">
-                <a href="#" class="footer__link">Câu hỏi thường gặp</a>
+                <a href="./get-help.html" class="footer__link">Câu hỏi thường gặp</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">Email góp ý</a>
+                <a href="./how-to-return-order.html" class="footer__link">Email góp ý</a>
               </li>
               <li class="footer__item">
                 <a href="#" class="footer__link">Hotline</a>
@@ -1458,5 +1458,17 @@
           Swal.showLoading();
       }
     </script>
+    <script type='text/javascript'>
+      // <![CDATA[
+          var btnHearths = document.getElementsByClassName("btnHearth");
+          for (let i = 0; i < btnHearths.length; i++)
+          {
+              btnHearths[i].addEventListener("click", function (param) {  
+                  
+              })
+          }
+          !function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+      // /]]>
+  </script>
   </body>
 </html>
