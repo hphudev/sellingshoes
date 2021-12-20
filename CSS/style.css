@@ -1,0 +1,377 @@
+*
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.content
+{
+	font-family: Arial, san-serif;
+	font-size: 18px;
+	line-height: 2em;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color: white;
+	color: black;
+}
+
+#lCount
+{
+	text-align: left;
+	margin-left: 11.5%;
+	padding-bottom: -10%;
+	color: #888888;
+}
+
+#lCount2
+{
+	text-align: left;
+	margin-left: 3%;
+	padding-bottom: -10%;
+	color: #888888;
+}
+
+#lPrice
+{
+	color: #888888;
+}
+
+.myButton
+{
+	text-decoration: none;
+	width: 100px;
+	display: block;
+	color: white;
+}
+
+#lHeader
+{
+	margin: 0 0 2em;
+	background-color: #CCCCCC;
+}
+
+.myButton:hover, .myButton:visited
+{
+	background-color: #990000;
+}
+
+.content
+{
+	position: relative;
+	width: 100%;
+}
+
+.table ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.roundedControl
+{
+	border-radius: 10px;
+}
+
+.seperator
+{
+	overflow: auto;
+}
+
+.coloredControl
+{
+	background-color: #000000;
+}
+
+.coloredControl2
+{
+	background-color: #FF6600;
+}
+
+.header
+{
+	padding: 10px 0 10px 0;
+}
+
+#bDeleteAll
+{
+	float: left;
+	margin-top: 2%;
+	margin-left: 11.5%;
+}
+
+#bDeleteAll2
+{
+	float: left;
+	margin-top: 2%;
+	margin-left: 3%;
+}
+
+#bContinueShopping
+{
+	float: right;
+	margin-top: 2%;
+	margin-right: 11.5%;
+	width: 175px;
+}
+
+#bContinueShopping2
+{
+	float: right;
+	margin-top: 2%;
+	margin-right: 3%;
+	width: 175px;
+}
+
+.table
+{
+	float: left;
+	width: 76%;
+	margin-left: 12%;
+	margin-top: 2%;
+}
+
+#table2
+{
+	margin-left: 3%;
+}
+
+.cell
+{
+	float: left;
+	height: 250px;
+	margin-bottom: 1%;
+}
+
+.cell:last-child
+{
+	float: right;
+	width: 22%;
+	margin-left: 5%;
+	margin-top: -0.05%;
+}
+
+#image
+{
+	width: 22%;
+}
+
+img
+{
+	display: block;
+	max-width: 225px;
+	max-height: 225px;
+	width: auto;
+	height: auto;
+}
+
+#info
+{
+	width: 46%;
+	margin-left: 5%;
+	margin-top: -0.05%;
+}
+
+#info2
+{
+	width: 62%;
+	margin-left: 15%;
+	margin-top: -0.05%;
+	text-align: left;
+}
+
+#info4
+{
+	width: 62%;
+	margin-left: 37%;
+	margin-top: -36.05%;
+	text-align: left;
+}
+
+#info3
+{
+	margin-right: -26%;
+}
+
+#info5
+{
+	margin-top: -36.05%;
+	margin-right: -26%;
+}
+
+.coloredText {
+	color: #FF5500;
+	text-align: right;
+}
+
+#bBuy, #bDelete
+{
+	margin-top: 10%;
+	margin-left: 54%;
+	width: 120px;
+}
+
+#bDelete2, #bAddToWishList
+{
+	margin-top: 10%;
+	margin-left: 32%;
+	width: 120px;
+}
+
+#info
+{
+	text-align: left;
+}
+
+.detailShoe
+{
+	margin-bottom: 4%;
+}
+
+#lSize, #lAmount, #tbSize, #tbAmount
+{
+	height: 25px;
+}
+
+#lAmount
+{
+	margin-right: 4%;
+}
+
+#tbAmount2
+{
+	margin-top: -8.8%;
+	margin-left: 73.7%;
+	border: 1px solid;
+	border-color: black;
+	width: 118px;
+	height: 36px;
+	padding-left: 2%;
+}
+
+#sizeController2
+{
+	margin-left: -6%;
+	margin-top: -11%;
+	width: 20px;
+}
+
+#tbSize, #tbAmount
+{
+	border: 1px solid;
+	width: 118px;
+	height: 36px;
+	padding-left: 2%;
+}
+
+#order
+{
+	text-align: left;
+	background-color: #CCCCCC;
+	width: 30.5%;
+	height: 94.6%;
+	margin-left: 12%;
+	margin-top: -16.5%;
+	padding-left: 1%;
+	padding-top: 0.25%;
+}
+
+.line
+{
+	margin-top: -8%;
+}
+
+#bContinuePaying
+{
+	width: 97%;
+	height: 70px;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 4%;
+}
+
+.blank
+{
+	margin-top: -4.6%;
+}
+
+#tbDiscountCode
+{
+	border: 1px solid;
+	border-color: black;
+	width: 70%;
+	float: left;
+}
+
+#bUse
+{
+	float: right;
+	margin-right: 4%;
+	margin-top: 0.5%;
+	text-align: center;
+}
+
+#lDiscount
+{
+	height: 40px;
+}
+
+.leftControl
+{
+	float: left;
+}
+
+.rightControl
+{
+	float: right;
+	margin-right: 4%;
+}
+
+.bAdd
+{
+	height: 20px;
+}
+
+.bSubtract
+{
+	height: 20px;
+}
+
+.controller
+{
+	width: 20px;
+	height: 40px;
+}
+
+#amountController
+{
+	margin-left: -4%;
+	margin-top: -2%;
+}
+
+#sizeController
+{
+	margin-left: -11%;
+	margin-top: -2%;
+	width: 20px;
+}
+
+#tbAmount
+{
+	margin-left: 55.5%;
+	border: 1px solid;
+	border-color: black;
+}
+
+.info
+{
+	width: 63.5%;
+	margin-left: 3%;
+}
+
+#content2
+{
+	height: 550px;
+}
