@@ -160,14 +160,24 @@
 
   .title-main {
       font-size: 40px;
+      padding-left: 12px;
+  }
+
+  .title-long {
+    padding-left: 12px;
   }
 
   .title-sub {
       font-size: 24px;
+      padding-left: 12px;
   }
 
   .news-content-container {
       padding: 20px 24px;
+  }
+
+  .upload-date {
+    padding-left: 12px;
   }
   /* End News */
 }
