@@ -38,10 +38,11 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../assets/css/base.css" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/responsive.css" />
-    <link rel="stylesheet" href="../assets/css/product.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="./assets/css/product.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <title>Selling Shoes</title>
     <script
@@ -50,7 +51,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body onbeforeunload="beforeReload()" onload="beforeReload()">
     <div class="app">
       <!-- BEGIN HEADER -->
       <div id="header">
@@ -58,7 +59,7 @@
         <div class="topbar">
           <ul class="topbar__list">
             <li class="topbar__item">
-              <a class="topbar__item-link" href="#">
+              <a class="topbar__item-link" href="./lookUpBill/index.html">
                 <i class="topbar__icon fas fa-truck"></i>
                 Tra cứu đơn hàng
               </a>
@@ -79,7 +80,7 @@
         </div>
 
         <div class="navbar">
-          <a href="#" class="navbar__logo-link">
+          <a href="./index.html" class="navbar__logo-link">
             <img
               src="./assets/images/logo-shoes.png"
               alt=""
@@ -91,7 +92,7 @@
             <ul class="navbar__list">
               <!-- Products -->
               <li class="navbar__item">
-                <a class="navbar__item-link" href="#"> Sản phẩm </a>
+                <a class="navbar__item-link" href="./listProduct/index.html"> Sản phẩm </a>
                 <ul class="navbar__dropdown-menu1">
                   <li class="navbar__dropdown-item1">
                     <a class="navbar__dropdown-link1" href="#">
@@ -1004,9 +1005,9 @@
               <span class="feedback__nickname">Nguyễn Thị Long</span>
             </div>
             <div class="feedback__content">
-              <p>
+              <3>
                 Đã mua hàng nhiều lần tại shop. Đóng gói cẩn thận, sản phẩm rất
-                đẹp. Yêu shop <3
+                đẹp. Yêu shop
               </p>
             </div>
             <div class="feedback__stars"></div>
@@ -1086,7 +1087,7 @@
             >
           </div>
         </div>
-        <a href="#" class="news__read-more-link">Xem thêm</a>
+        <a href="./newsControl/index.html" class="news__read-more-link">Xem thêm</a>
       </div>
 
       <div id="footer">
@@ -1447,5 +1448,15 @@
 
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js"></script>
+    <script type="text/javascript">
+      function beforeReload() {  
+          Swal.fire({
+                 timer: 700,
+                 width: "100px",
+                 background: "#000",
+              });
+          Swal.showLoading();
+      }
+    </script>
   </body>
 </html>

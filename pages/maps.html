@@ -665,7 +665,7 @@
             <li><a href="#">Sale-off</a></li>
             <li><a href="#">Tra cứu đơn hàng</a></li>
             <li><a href="#">Tìm cửa hàng</a></li>
-            <li><a href="#">Đăng nhập</a></li>
+            <li onclick="showLoginModal()"><a href="#">Đăng nhập</a></li>
           </ul>
         </div>
       </div>
@@ -1102,8 +1102,149 @@
             break;
         }
       });
+
+      // append plus symbol to every list item that has children
+      $("#mobile-nav .mobile-nav__parent").append(
+        '<span class="open-menu fa fa-plus"></span>'
+      );
+
+      // fix non-scrolling overflow issue on mobile devices
+      $("#mobile-nav > ul").wrap('<div class="overflow"></div>');
+      $(window).on("load resize", function () {
+        var vph = $(window).height() - 57; // 57px - height of #mobile-nav
+        $(".overflow").css("max-height", vph);
+      });
+
+      // global variables
+      var menu = $(".overflow > ul");
+      var bg = $("html, body");
+
+      // toggle background scrolling
+      function bgScrolling() {
+        // if menu has toggled class... *
+        if (menu.hasClass("open")) {
+          // * disable background scrolling
+          bg.css({
+            "overflow-y": "hidden",
+            height: "auto",
+          });
+          // if menu does not have toggled class... *
+        } else {
+          // * enable background scrolling
+          bg.css({
+            "overflow-y": "visible",
+            height: "100%",
+          });
+        }
+      }
+
+      // menu button click events
+      $(".mobile-nav__menu-button").on("click", function (e) {
+        e.preventDefault();
+        // activate toggles
+        menu.slideToggle(250);
+        menu.toggleClass("open");
+        $(this).children().toggleClass("fa-bars fa-times");
+        bgScrolling();
+      });
+
+      // list item click events
+      $(".open-menu").on("click", function (e) {
+        e.preventDefault();
+        $(this).prev("ul").slideToggle(250);
+        $(this).toggleClass("rotate");
+      });
+    });
+
+    function searchToggle(obj, evt) {
+      const container = $(obj).closest(".search");
+      const menu = document.querySelector(".navbar__list");
+      const searchBox = document.querySelector(".search__input");
+
+      if (!container.hasClass("active")) {
+        container.addClass("active");
+        evt.preventDefault();
+        menu.style.display = "none";
+        searchBox.focus();
+      } else if (
+        container.hasClass("active") &&
+        $(obj).closest(".search__input-holder").length == 0
+      ) {
+        container.removeClass("active");
+        // clear input
+        container.find(".search__input").val("");
+        menu.style.display = "flex";
+      }
+    }
+    // Slider event
+    var slideIndex = 0;
+    const slides = document.getElementsByClassName("slider__slide");
+
+    nextSlide();
+
+    function nextSlide() {
+      slideIndex += 1;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      showSlides(slideIndex);
+      setTimeout(nextSlide, 4000);
+    }
+
+    function showSlides(n) {
+      var i;
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+    // Modals
+    const loginModal = document.querySelector(".modal-login");
+    const registerModal = document.querySelector(".modal-register");
+
+    const loginModalContainer = document.querySelector(
+      ".modal__login-container"
+    );
+    const registerModalContainer = document.querySelector(
+      ".modal__register-container"
+    );
+
+    function showLoginModal() {
+      loginModal.classList.add("open-modal");
+    }
+
+    function hideLoginModal() {
+      loginModal.classList.remove("open-modal");
+    }
+
+    function showRegisterModal() {
+      registerModal.classList.add("open-modal");
+    }
+
+    function hideRegisterModal() {
+      registerModal.classList.remove("open-modal");
+    }
+
+    function registerNow() {
+      hideLoginModal();
+      showRegisterModal();
+    }
+
+    function loginNow() {
+      hideRegisterModal();
+      showLoginModal();
+    }
+
+    // Hide modal whenever click outside
+
+    loginModal.addEventListener("click", hideLoginModal);
+    loginModalContainer.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+
+    registerModal.addEventListener("click", hideRegisterModal);
+    registerModalContainer.addEventListener("click", function (event) {
+      event.stopPropagation();
     });
   </script>
-  <script src="../assets/js/owl.carousel.min.js"></script>
-  <script src="../assets/js/home.js"></script>
 </html>

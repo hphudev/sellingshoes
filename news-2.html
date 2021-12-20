@@ -12,268 +12,648 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <title>Tin tức</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Converse All Star - Câu chuyện đằng sau biểu tượng Chuck Taylor</title>
     <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous">
     </script>
+    <style>
+        .search__search-icon span::after {
+            width: 14px;
+            height: 14px;
+            left: 0px;
+            top: 0px;
+            border-radius: 16px;
+            border: 4px solid var(--text-color);
+        }
+</style>
 </head>
-<body>
+<body onbeforeunload="beforeReload()" onload="beforeReload()">
     <div class="app">
         <!-- BEGIN HEADER -->
         <div id="header">
             <!-- Top bar -->
             <div class="topbar">
-                <ul class="topbar__list">
-                    <li class="topbar__item">
-                        <a class="topbar__item-link" href="#">
-                            <i class="topbar__icon fas fa-truck"></i>
-                            Tra cứu đơn hàng
-                        </a>
-                    </li>
-                    <li class="topbar__item">
-                        <a class="topbar__item-link" href="#">
-                            <i class="topbar__icon fas fa-map-marker-alt"></i>
-                            Tìm cửa hàng
-                        </a>
-                    </li>
-                    <li class="topbar__item">
-                        <a class="topbar__item-link" href="#">
-                            <i class="topbar__icon fas fa-user"></i>
-                            Đăng nhập
-                        </a>
-                    </li>
- 
-                </ul>
+              <ul class="topbar__list">
+                <li class="topbar__item">
+                  <a class="topbar__item-link" href="#">
+                    <i class="topbar__icon fas fa-truck"></i>
+                    Tra cứu đơn hàng
+                  </a>
+                </li>
+                <li class="topbar__item">
+                  <a class="topbar__item-link" href="./pages/maps.html">
+                    <i class="topbar__icon fas fa-map-marker-alt"></i>
+                    Tìm cửa hàng
+                  </a>
+                </li>
+                <li class="topbar__item">
+                  <a class="topbar__item-link" href="#" onclick="showLoginModal()">
+                    <i class="topbar__icon fas fa-user"></i>
+                    Đăng nhập
+                  </a>
+                </li>
+              </ul>
             </div>
-
+    
             <div class="navbar">
-                <a href="#" class="navbar__logo-link">
-                    <img src="./assets/images/logo-shoes.png" alt="" class="navbar__logo">
-                </a>
-                <div class="navbar__menu-container">
-                    <!-- Menu -->
-                    <ul class="navbar__list">
-                        <!-- Products -->
-                        <li class="navbar__item">
-                            <a class="navbar__item-link" href="#">
-                                Sản phẩm
-                            </a>   
-                            <ul class="navbar__dropdown-menu1">
-                                <li class="navbar__dropdown-item1">
-                                    <a class="navbar__dropdown-link1" href="#">
-                                        <img class="navbar__dropdown-img" src="./assets/images/men-shoes.jpg" alt="For Men">
-                                        <div class="navbar__dropdown1-title">CHO NAM</div>
-                                    </a>
-                                </li>
-                                <li class="navbar__dropdown-item1">
-                                    <a class="navbar__dropdown-link1" href="#">
-                                        <img class="navbar__dropdown-img" src="./assets/images/women-shoes.jpg" alt="For Women">
-                                        <div class="navbar__dropdown1-title">CHO NỮ</div>
-                                    </a>
-                                </li>
-                                <li class="navbar__dropdown-item1">
-                                    <a class="navbar__dropdown-link1" href="#">
-                                        <img class="navbar__dropdown-img" src="./assets/images/latest-shoes.jpg" alt="Lastest Products">
-                                        <div class="navbar__dropdown1-title">MỚI NHẤT</div>
-                                    </a>
-                                </li>
-                                <li class="navbar__dropdown-item1">
-                                    <a class="navbar__dropdown-link1" href="#">
-                                        <img class="navbar__dropdown-img" src="./assets/images/best-seller.jpg" alt="Best Seller">
-                                        <div class="navbar__dropdown1-title">BÁN CHẠY</div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- For men -->
-                        <li class="navbar__item">
-                            <a class="navbar__item-link" href="#">
-                                Cho nam
-                            </a>
-                            <div class="navbar__dropdown-menu2">
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Nổi bật</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Mới nhất</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Bán chạy</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Đang giảm giá</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Giày</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Tất cả</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Đang giảm giá</a></li>             
-                                        <li><a href="#" class="navbar__column-item-link">Thể thao</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Thường ngày</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Chạy bộ</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Bóng rổ</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Tennis</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Đá bóng</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Lướt ván</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Sandals</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Phụ kiện</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Tất cả</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Đang giảm giá</a></li>             
-                                        <li><a href="#" class="navbar__column-item-link">Mắt kính</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Vòng tay</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Tất</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Nón</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Dây giày</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Balo</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Túi</a></li> 
-                                    </ul>
-                                </div>
-
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Thương hiệu</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Adidas</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Nike</a></li>             
-                                        <li><a href="#" class="navbar__column-item-link">Converse</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Puma</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Vans</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Balenciaga</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Khác</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- For women -->
-                        <li class="navbar__item">
-                            <a class="navbar__item-link" href="#">
-                                Cho nữ
-                            </a>
-                            <div class="navbar__dropdown-menu2">
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Nổi bật</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Mới nhất</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Bán chạy</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Đang giảm giá</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Giày</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Tất cả</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Đang giảm giá</a></li>             
-                                        <li><a href="#" class="navbar__column-item-link">Thể thao</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Thường ngày</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Chạy bộ</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Bóng rổ</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Tennis</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Đá bóng</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Lướt ván</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Sandals</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Phụ kiện</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Tất cả</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Đang giảm giá</a></li>             
-                                        <li><a href="#" class="navbar__column-item-link">Vòng tay</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Mắt kính</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Tất</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Nón</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Dây giày</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Balo</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Túi</a></li> 
-                                    </ul>
-                                </div>
-
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Thương hiệu</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Adidas</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Nike</a></li>             
-                                        <li><a href="#" class="navbar__column-item-link">Converse</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Puma</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Vans</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Balenciaga</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Khác</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- Sale-off -->
-                        <li class="navbar__item tablet-hide">
-                            <a class="navbar__item-link" href="#">
-                                Sale Off
-                            </a>
-                            <div class="navbar__dropdown-menu2">
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Nổi bật</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Tất cả</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Số lượng có hạn</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Giảm giá cho nam</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Tất cả</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Giày</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Phụ kiện</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Giảm giá cho nữ</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Tất cả</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Giày</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Phụ kiện</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="navbar__dropdown-column">
-                                    <span class="navbar__dropdown-column-title">Thương hiệu</span>
-                                    <ul class="navbar__column-list">
-                                        <li><a href="#" class="navbar__column-item-link">Adidas</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Nike</a></li>             
-                                        <li><a href="#" class="navbar__column-item-link">Converse</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Puma</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Vans</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Balenciaga</a></li>
-                                        <li><a href="#" class="navbar__column-item-link">Khác</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
+              <a href="#" class="navbar__logo-link">
+                <img
+                  src="./assets/images/logo-shoes.png"
+                  alt=""
+                  class="navbar__logo"
+                />
+              </a>
+              <div class="navbar__menu-container">
+                <!-- Menu -->
+                <ul class="navbar__list">
+                  <!-- Products -->
+                  <li class="navbar__item">
+                    <a class="navbar__item-link" href="#"> Sản phẩm </a>
+                    <ul class="navbar__dropdown-menu1">
+                      <li class="navbar__dropdown-item1">
+                        <a class="navbar__dropdown-link1" href="#">
+                          <img
+                            class="navbar__dropdown-img"
+                            src="./assets/images/men-shoes.jpg"
+                            alt="For Men"
+                          />
+                          <div class="navbar__dropdown1-title">CHO NAM</div>
+                        </a>
+                      </li>
+                      <li class="navbar__dropdown-item1">
+                        <a class="navbar__dropdown-link1" href="#">
+                          <img
+                            class="navbar__dropdown-img"
+                            src="./assets/images/women-shoes.jpg"
+                            alt="For Women"
+                          />
+                          <div class="navbar__dropdown1-title">CHO NỮ</div>
+                        </a>
+                      </li>
+                      <li class="navbar__dropdown-item1">
+                        <a class="navbar__dropdown-link1" href="#">
+                          <img
+                            class="navbar__dropdown-img"
+                            src="./assets/images/latest-shoes.jpg"
+                            alt="Lastest Products"
+                          />
+                          <div class="navbar__dropdown1-title">MỚI NHẤT</div>
+                        </a>
+                      </li>
+                      <li class="navbar__dropdown-item1">
+                        <a class="navbar__dropdown-link1" href="#">
+                          <img
+                            class="navbar__dropdown-img"
+                            src="./assets/images/best-seller.jpg"
+                            alt="Best Seller"
+                          />
+                          <div class="navbar__dropdown1-title">BÁN CHẠY</div>
+                        </a>
+                      </li>
                     </ul>
-                    <!-- Search -->
-                    <div class="search">
-                        <div class="search__input-holder">
-                            <input type="text" class="search__input" placeholder="Tìm kiếm" />
-                            <button class="search__search-icon" onclick="searchToggle(this, event);">
-                                <span></span>
-                            </button>
-                        </div>
-                        <span class="search__close" onclick="searchToggle(this, event);"></span>
+                  </li>
+                  <!-- For men -->
+                  <li class="navbar__item">
+                    <a class="navbar__item-link" href="#"> Cho nam </a>
+                    <div class="navbar__dropdown-menu2">
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title">Nổi bật</span>
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Mới nhất</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Bán chạy</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Đang giảm giá</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+    
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title">Giày</span>
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Tất cả</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Đang giảm giá</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Thể thao</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Thường ngày</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Chạy bộ</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Bóng rổ</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Tennis</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Đá bóng</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Lướt ván</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Sandals</a>
+                          </li>
+                        </ul>
+                      </div>
+    
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title">Phụ kiện</span>
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Tất cả</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Đang giảm giá</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Mắt kính</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Vòng tay</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Tất</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Nón</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Dây giày</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Balo</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Túi</a>
+                          </li>
+                        </ul>
+                      </div>
+    
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title"
+                          >Thương hiệu</span
+                        >
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Adidas</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Nike</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Converse</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Puma</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Vans</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Balenciaga</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Khác</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    <!-- Favorite & Cart -->
-                    <div class="navbar__cart-wrapper">
-                        <a href="#" class="navbar__cart-link">
-                            <i class="navbar__cart-icon far fa-heart"></i>
-                        </a>
-                        <a href="#" class="navbar__cart-link">
-                            <i class="navbar__cart-icon fas fa-shopping-cart"></i>
-                        </a>
+                  </li>
+                  <!-- For women -->
+                  <li class="navbar__item">
+                    <a class="navbar__item-link" href="#"> Cho nữ </a>
+                    <div class="navbar__dropdown-menu2">
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title">Nổi bật</span>
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Mới nhất</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Bán chạy</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Đang giảm giá</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+    
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title">Giày</span>
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Tất cả</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Đang giảm giá</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Thể thao</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Thường ngày</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Chạy bộ</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Bóng rổ</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Tennis</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Đá bóng</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Lướt ván</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Sandals</a>
+                          </li>
+                        </ul>
+                      </div>
+    
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title">Phụ kiện</span>
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Tất cả</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Đang giảm giá</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Vòng tay</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Mắt kính</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Tất</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Nón</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Dây giày</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Balo</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Túi</a>
+                          </li>
+                        </ul>
+                      </div>
+    
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title"
+                          >Thương hiệu</span
+                        >
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Adidas</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Nike</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Converse</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Puma</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Vans</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Balenciaga</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Khác</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
+                  </li>
+                  <!-- Sale-off -->
+                  <li class="navbar__item tablet-hide">
+                    <a class="navbar__item-link" href="#"> Sale Off </a>
+                    <div class="navbar__dropdown-menu2">
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title">Nổi bật</span>
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Tất cả</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Số lượng có hạn</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+    
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title"
+                          >Giảm giá cho nam</span
+                        >
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Tất cả</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Giày</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Phụ kiện</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+    
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title"
+                          >Giảm giá cho nữ</span
+                        >
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Tất cả</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Giày</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Phụ kiện</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+    
+                      <div class="navbar__dropdown-column">
+                        <span class="navbar__dropdown-column-title"
+                          >Thương hiệu</span
+                        >
+                        <ul class="navbar__column-list">
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Adidas</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Nike</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Converse</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Puma</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Vans</a>
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link"
+                              >Balenciaga</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="navbar__column-item-link">Khác</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- Search -->
+                <div class="search">
+                  <div class="search__input-holder">
+                    <input
+                      type="text"
+                      class="search__input"
+                      placeholder="Tìm kiếm"
+                    />
+                    <button
+                      class="search__search-icon"
+                      onclick="searchToggle(this, event);"
+                    >
+                      <span></span>
+                    </button>
+                  </div>
+                  <span
+                    class="search__close"
+                    onclick="searchToggle(this, event);"
+                  ></span>
                 </div>
+                <!-- Favorite & Cart -->
+                <div class="navbar__cart-wrapper">
+                  <a href="#" class="navbar__cart-link">
+                    <i class="navbar__cart-icon far fa-heart"></i>
+                  </a>
+                  <a href="#" class="navbar__cart-link">
+                    <i class="navbar__cart-icon fas fa-shopping-cart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="mobile-nav">
+              <div class="mobile-nav__logo">T14 Store</div>
+              <div class="mobile-nav__menu-button">
+                <span class="fas fa-bars"></span>
+              </div>
+              <!-- Favorite & Cart -->
+              <div class="mobile-nav__link-wrapper">
+                <a href="#" class="mobile-nav__link">
+                  <i class="mobile-nav__icon far fa-heart"></i>
+                </a>
+                <a href="#" class="mobile-nav__link">
+                  <i class="mobile-nav__icon fas fa-shopping-cart"></i>
+                </a>
+              </div>
+    
+              <ul>
+                <li class="mobile-nav__search">
+                  <input
+                    class="mobile-nav__search-input"
+                    type="text"
+                    placeholder="Tìm kiếm"
+                  />
+                  <a href="#" class="mobile-nav__search-link"
+                    ><i class="fas fa-search"></i
+                  ></a>
+                </li>
+                <li><a href="#">Trang chủ</a></li>
+                <li class="mobile-nav__parent">
+                  <a href="#">Sản phẩm</a>
+                  <ul>
+                    <li><a href="#">Cho nam</a></li>
+                    <li><a href="#">Cho nữ</a></li>
+                    <li><a href="#">Mới nhất</a></li>
+                    <li><a href="#">Bán chạy</a></li>
+                  </ul>
+                </li>
+                <li class="mobile-nav__parent">
+                  <a href="#">Cho nam</a>
+                  <ul>
+                    <li class="mobile-nav__parent">
+                      <a href="#">Giày</a>
+                      <ul>
+                        <li><a href="#">Đang giảm giá</a></li>
+                        <li><a href="#">Thể thao</a></li>
+                        <li><a href="#">Thường ngày</a></li>
+                        <li><a href="#">Chạy bộ</a></li>
+                        <li><a href="#">Bóng rổ</a></li>
+                        <li><a href="#">Tennis</a></li>
+                        <li><a href="#">Đá bóng</a></li>
+                        <li><a href="#">Lướt ván</a></li>
+                        <li><a href="#">Sandals</a></li>
+                      </ul>
+                    </li>
+                    <li class="mobile-nav__parent">
+                      <a href="#">Phụ kiện</a>
+                      <ul>
+                        <li><a href="#">Đang giảm giá</a></li>
+                        <li><a href="#">Mắt kính</a></li>
+                        <li><a href="#">Vòng tay</a></li>
+                        <li><a href="#">Tất</a></li>
+                        <li><a href="#">Nón</a></li>
+                        <li><a href="#">Dây giày</a></li>
+                        <li><a href="#">Balo</a></li>
+                        <li><a href="#">Túi</a></li>
+                      </ul>
+                    </li>
+                    <li class="mobile-nav__parent">
+                      <a href="#">Thương hiệu</a>
+                      <ul>
+                        <li><a href="#">Adidas</a></li>
+                        <li><a href="#">Nike</a></li>
+                        <li><a href="#">Converse</a></li>
+                        <li><a href="#">Puma</a></li>
+                        <li><a href="#">Vans</a></li>
+                        <li><a href="#">Balenciaga</a></li>
+                        <li><a href="#">Khác</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mobile-nav__parent">
+                  <a href="#">Cho nữ</a>
+                  <ul>
+                    <li class="mobile-nav__parent">
+                      <a href="#">Giày</a>
+                      <ul>
+                        <li><a href="#">Đang giảm giá</a></li>
+                        <li><a href="#">Thể thao</a></li>
+                        <li><a href="#">Thường ngày</a></li>
+                        <li><a href="#">Chạy bộ</a></li>
+                        <li><a href="#">Bóng rổ</a></li>
+                        <li><a href="#">Tennis</a></li>
+                        <li><a href="#">Đá bóng</a></li>
+                        <li><a href="#">Lướt ván</a></li>
+                        <li><a href="#">Sandals</a></li>
+                      </ul>
+                    </li>
+                    <li class="mobile-nav__parent">
+                      <a href="#">Phụ kiện</a>
+                      <ul>
+                        <li><a href="#">Đang giảm giá</a></li>
+                        <li><a href="#">Mắt kính</a></li>
+                        <li><a href="#">Vòng tay</a></li>
+                        <li><a href="#">Tất</a></li>
+                        <li><a href="#">Nón</a></li>
+                        <li><a href="#">Dây giày</a></li>
+                        <li><a href="#">Balo</a></li>
+                        <li><a href="#">Túi</a></li>
+                      </ul>
+                    </li>
+                    <li class="mobile-nav__parent">
+                      <a href="#">Thương hiệu</a>
+                      <ul>
+                        <li><a href="#">Adidas</a></li>
+                        <li><a href="#">Nike</a></li>
+                        <li><a href="#">Converse</a></li>
+                        <li><a href="#">Puma</a></li>
+                        <li><a href="#">Vans</a></li>
+                        <li><a href="#">Balenciaga</a></li>
+                        <li><a href="#">Khác</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#">Sale-off</a></li>
+                <li><a href="#">Tra cứu đơn hàng</a></li>
+                <li><a href="./pages/maps.html">Tìm cửa hàng</a></li>
+                <li onclick="showLoginModal()"><a href="#">Đăng nhập</a></li>
+              </ul>
             </div>
         </div>
         <!-- END HEADER -->
@@ -446,9 +826,198 @@
                 <p>Copyright © 2021 Team 14 GTNM. All rights reserved.</p>
             </div>
         </div>
+
+        <!-- Login -->
+        <div class="modal-login">
+            <div class="modal__login-container">
+            <button class="modal__close" onclick="hideLoginModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal__header">
+                <p class="modal__header-title">ĐĂNG NHẬP</p>
+            </div>
+            <div class="modal__body">
+                <input
+                class="modal__input"
+                type="text"
+                placeholder="Email / Số điện thoại / Tên đăng nhập"
+                style="margin-top: 0"
+                />
+                <input class="modal__input" type="password" placeholder="Mật khẩu" />
+                <button class="modal__button" onclick="hideLoginModal()">
+                ĐĂNG NHẬP
+                </button>
+                <a href="#" class="modal__link">Quên mật khẩu</a>
+            </div>
+            <div class="login-with">
+                <div class="login-with__title">ĐĂNG NHẬP VỚI</div>
+                <div class="login-with__item" onclick="hideLoginModal()">
+                <i class="fab fa-facebook-f login-with__icon"></i>
+                Facebook
+                </div>
+                <div
+                style="right: 0"
+                class="login-with__item"
+                onclick="hideLoginModal()"
+                >
+                <i class="fab fa-google login-with__icon"></i>
+                Google
+                </div>
+            </div>
+            <div class="modal__suggestion">
+                Bạn chưa có tài khoản ?
+                <a href="#" class="modal__link-suggestion" onclick="registerNow()"
+                >Đăng ký ngay</a
+                >
+            </div>
+            </div>
+        </div>
+        <!-- Register -->
+        <div class="modal-register">
+            <div class="modal__register-container">
+            <button class="modal__close" onclick="hideRegisterModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal__header">
+                <p class="modal__header-title">ĐĂNG KÝ</p>
+                <div class="modal__body">
+                <input
+                    class="modal__input"
+                    type="text"
+                    placeholder="Email / Số điện thoại / Tên đăng nhập"
+                    style="margin-top: 0"
+                />
+                <input
+                    class="modal__input"
+                    type="password"
+                    placeholder="Mật khẩu"
+                />
+                <input
+                    class="modal__input"
+                    type="password"
+                    placeholder="Nhập lại mật khẩu"
+                />
+                <div class="modal__name-fields">
+                    <input class="modal__name-input" type="text" placeholder="Họ" />
+                    <input class="modal__name-input" type="text" placeholder="Tên" />
+                </div>
+                <div class="modal__gender-section">
+                    <div>
+                    <input
+                        type="radio"
+                        id="modal__gender-male"
+                        name="modal__gender"
+                    />
+                      <label for="modal__gender-male">Nam</label>
+                    </div>
+                    <div>
+                     
+                    <input
+                        type="radio"
+                        id="modal__gender-female"
+                        name="modal__gender"
+                    />
+                      <label for="modal__gender-female">Nữ</label>
+                    </div>
+                </div>
+                <div class="modal__term">
+                    <input type="checkbox" />
+                    Tôi đã đọc và đồng ý với <a href="#">các điều khoản</a>
+                </div>
+                <button class="modal__button" onclick="hideRegisterModal()">
+                    ĐĂNG KÝ
+                </button>
+                <div class="modal__suggestion">
+                    Bạn đã có tài khoản ?
+                    <a href="#" class="modal__link-suggestion" onclick="loginNow()"
+                    >Đăng nhập ngay</a
+                    >
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
     
     <script>
+        // Mobile menu
+        $(document).ready(function () {
+            // append plus symbol to every list item that has children
+            $("#mobile-nav .mobile-nav__parent").append(
+                '<span class="open-menu fa fa-plus"></span>'
+            );
+
+            // fix non-scrolling overflow issue on mobile devices
+            $("#mobile-nav > ul").wrap('<div class="overflow"></div>');
+                $(window).on("load resize", function () {
+                var vph = $(window).height() - 57; // 57px - height of #mobile-nav
+                $(".overflow").css("max-height", vph);
+            });
+
+            // global variables
+            var menu = $(".overflow > ul");
+            var bg = $("html, body");
+
+            // toggle background scrolling
+            function bgScrolling() {
+                // if menu has toggled class... *
+                if (menu.hasClass("open")) {
+                    // * disable background scrolling
+                    bg.css({
+                    "overflow-y": "hidden",
+                    height: "auto",
+                    });
+                    // if menu does not have toggled class... *
+                } else {
+                    // * enable background scrolling
+                    bg.css({
+                        "overflow-y": "visible",
+                        height: "100%",
+                    });
+                }
+            }
+
+            // menu button click events
+            $(".mobile-nav__menu-button").on("click", function (e) {
+                e.preventDefault();
+                // activate toggles
+                menu.slideToggle(250);
+                menu.toggleClass("open");
+                $(this).children().toggleClass("fa-bars fa-times");
+                bgScrolling();
+            });
+
+            // list item click events
+            $(".open-menu").on("click", function (e) {
+                e.preventDefault();
+                $(this).prev("ul").slideToggle(250);
+                $(this).toggleClass("rotate");
+            });
+
+            var owlNewProduct = $("#owl-carousel-new-product");
+            $("#btn-back-new-product").click(function () {
+                owlNewProduct.trigger("prev.owl.carousel");
+            });
+            $("#btn-forward-new-product").click(function () {
+                owlNewProduct.trigger("next.owl.carousel");
+            });
+            owlNewProduct.owlCarousel({
+                loop: true,
+                items: 4,
+            });
+            var owlBestProduct = $("#owl-carousel-best-product");
+            $("#btn-back-best-product").click(function () {
+                owlBestProduct.trigger("prev.owl.carousel");
+            });
+            $("#btn-forward-best-product").click(function () {
+                owlBestProduct.trigger("next.owl.carousel");
+            });
+            owlBestProduct.owlCarousel({
+                loop: true,
+                items: 4,
+            });
+        });
+
         // Search click event
         function searchToggle(obj, evt) {
             const container = $(obj).closest('.search');
@@ -488,6 +1057,55 @@
             }          
             slides[slideIndex-1].style.display = "block";
         }
+
+        // Modals
+        const loginModal = document.querySelector(".modal-login");
+        const registerModal = document.querySelector(".modal-register");
+
+        const loginModalContainer = document.querySelector(
+            ".modal__login-container"
+        );
+        const registerModalContainer = document.querySelector(
+            ".modal__register-container"
+        );
+
+        function showLoginModal() {
+            loginModal.classList.add("open-modal");
+        }
+
+        function hideLoginModal() {
+            loginModal.classList.remove("open-modal");
+        }
+
+        function showRegisterModal() {
+            registerModal.classList.add("open-modal");
+        }
+
+        function hideRegisterModal() {
+            registerModal.classList.remove("open-modal");
+        }
+
+        function registerNow() {
+            hideLoginModal();
+            showRegisterModal();
+        }
+
+        function loginNow() {
+            hideRegisterModal();
+            showLoginModal();
+        }
+
+        // Hide modal whenever click outside
+
+        loginModal.addEventListener("click", hideLoginModal);
+        loginModalContainer.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+
+        registerModal.addEventListener("click", hideRegisterModal);
+        registerModalContainer.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
 
         //Show feedback modal
         $('#btnFeedback').click(function() {
@@ -532,4 +1150,14 @@
     </script>
 </body>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+    .search__search-icon span::after {
+        width: 14px;
+        height: 14px;
+        left: 0px;
+        top: 0px;
+        border-radius: 16px;
+        border: 4px solid var(--text-color);
+    }
+</style>
 </html>
