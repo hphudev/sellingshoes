@@ -66,6 +66,9 @@ function sizeDecrease () {
 }
 
 function sizeClick(size) {
+    if ($('.size-amount').hasClass('invisible')) {
+        $('.size-amount').removeClass('invisible')
+    }
     max_item = Math.floor(Math.random() * 20) + 1;
     $(".btn-size-active").removeClass("btn-size-active");
     size.addClass("btn-size-active");
